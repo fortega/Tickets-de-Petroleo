@@ -15,7 +15,16 @@ namespace Tickets_de_Petroleo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            if (Properties.Settings.Default.autouser_active)
+            {
+                Application.Run(new Main(
+                    new Operador(Properties.Settings.Default.autouser_user, Properties.Settings.Default.autouser_admin)));
+            }
+            else
+            {
+                Application.Run(new LogIn());
+            }
         }
     }
 }

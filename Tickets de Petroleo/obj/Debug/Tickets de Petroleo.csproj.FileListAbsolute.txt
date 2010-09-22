@@ -1,0 +1,9 @@
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\bin\Debug\Tickets de Petroleo.exe.config
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\bin\Debug\Tickets de Petroleo.exe
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\bin\Debug\Tickets de Petroleo.pdb
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets_de_Petroleo.LogIn.resources
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets_de_Petroleo.Properties.Resources.resources
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets de Petroleo.csproj.GenerateResource.Cache
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets de Petroleo.exe
+C:\Users\felipe\Documents\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets de Petroleo.pdb
