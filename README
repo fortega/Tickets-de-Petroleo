@@ -1,0 +1,7 @@
+Requerimientos
+---------------
+Se requiere un programa para ingresar compras de petróleo y entregar tickets de canje de petróleo a empresa contratista para canje en varias bombas de combustible con el objetivo de llevar un registro detallado de compras y salida de petróleo.
+Cada ticket de canje de petroleo es respaldado con una guia de despacho emitida por la bomba con la cantidad exacta de petroleo cargada. Esta guia debe ser entregada luego de la carga para “cerrar” un ticket de petroleo y poder facturarlo.
+El petroleo cargado no puede ser mayor al indicado en el ticket de canje pero si puede ser menor.
+No se puede ingresar un ticket a un chofer o camion si tiene un ticket que no ha entregado la guia.
+El programa tiene operadores “administradores” que pueden realizar ingreso de petroleo, modificar y crear usuario y modificar tickets de petroleo. Los usuarios que normales pueden crear tickets de canje y cerrar tickets de canje.
