@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
 
 namespace Tickets_de_Petroleo
 {
@@ -9,6 +10,11 @@ namespace Tickets_de_Petroleo
     {
         private string nombre;
         private bool admin;
+
+        public Operador(string nombre, string passwd)
+        {
+            
+        }
 
         public Operador(string nombre, bool admin)
         {
