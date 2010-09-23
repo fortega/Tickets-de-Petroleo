@@ -25,7 +25,7 @@ namespace Tickets_de_Petroleo.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        [global::System.Configuration.DefaultSettingValueAttribute("administrador")]
         public string autouser_nombre {
             get {
                 return ((string)(this["autouser_nombre"]));
@@ -37,7 +37,7 @@ namespace Tickets_de_Petroleo.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("pass")]
+        [global::System.Configuration.DefaultSettingValueAttribute("password")]
         public string autouser_passwd {
             get {
                 return ((string)(this["autouser_passwd"]));
@@ -49,7 +49,7 @@ namespace Tickets_de_Petroleo.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool autouser_active {
             get {
                 return ((bool)(this["autouser_active"]));

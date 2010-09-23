@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="autouser_nombre" Type="System.String" Scope="User">
-      <Value Profile="(Default)">admin</Value>
+      <Value Profile="(Default)">administrador</Value>
     </Setting>
     <Setting Name="autouser_passwd" Type="System.String" Scope="User">
-      <Value Profile="(Default)">pass</Value>
+      <Value Profile="(Default)">password</Value>
     </Setting>
     <Setting Name="autouser_active" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="db" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Source=database;Initial Catalog=PETROLEO;Integrated Security=True</Value>
