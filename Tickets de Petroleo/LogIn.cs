@@ -36,10 +36,14 @@ namespace Tickets_de_Petroleo
         {
             try
             {
-                Operador operador = new Operador(cbNombre.SelectedText, tbPasswd.Text);
+                Operador operador = new Operador(
+                    ((Operador)cbNombre.SelectedItem).Nombre,
+                    tbPasswd.Text);
+
+                this.Hide();
 
                 Main main = new Main(operador);
-                main.Show();
+                main.ShowDialog();
 
                 this.Close();
             }
