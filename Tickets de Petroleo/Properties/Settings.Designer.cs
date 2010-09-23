@@ -25,25 +25,25 @@ namespace Tickets_de_Petroleo.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Admin")]
-        public string autouser_user {
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        public string autouser_nombre {
             get {
-                return ((string)(this["autouser_user"]));
+                return ((string)(this["autouser_nombre"]));
             }
             set {
-                this["autouser_user"] = value;
+                this["autouser_nombre"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool autouser_admin {
+        [global::System.Configuration.DefaultSettingValueAttribute("pass")]
+        public string autouser_passwd {
             get {
-                return ((bool)(this["autouser_admin"]));
+                return ((string)(this["autouser_passwd"]));
             }
             set {
-                this["autouser_admin"] = value;
+                this["autouser_passwd"] = value;
             }
         }
         

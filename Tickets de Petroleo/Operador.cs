@@ -26,12 +26,6 @@ namespace Tickets_de_Petroleo
                 throw new Exception("Nombre o Password incorrecto");
         }
 
-        public Operador(string nombre, bool admin)
-        {
-            this.nombre = nombre;
-            this.admin = admin;
-        }
-
         public string Nombre
         {
             get { return nombre; }

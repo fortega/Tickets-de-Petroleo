@@ -23,8 +23,19 @@ namespace Tickets_de_Petroleo
 
         private void Ingresar(object sender, EventArgs e)
         {
+            try
+            {
+                Operador operador = new Operador(cbNombre.SelectedText, tbPasswd.Text);
 
-            //TODO
+                Main main = new Main(operador);
+                main.Show();
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

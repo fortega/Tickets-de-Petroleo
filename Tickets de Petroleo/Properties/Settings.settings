@@ -2,11 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Tickets_de_Petroleo.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="autouser_user" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Admin</Value>
+    <Setting Name="autouser_nombre" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
     </Setting>
-    <Setting Name="autouser_admin" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+    <Setting Name="autouser_passwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pass</Value>
     </Setting>
     <Setting Name="autouser_active" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
