@@ -44,7 +44,7 @@ namespace Tickets_de_Petroleo
 
         public override string ToString()
         {
-            return nombre;
+            return (admin ? "+ " : "- ") + nombre;
         }
 
         public static Operador[] getTodos()

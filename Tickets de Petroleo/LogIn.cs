@@ -18,6 +18,13 @@ namespace Tickets_de_Petroleo
 
         private void CargarOperadores()
         {
+            Operador[] operadores = Operador.getTodos();
+
+            cbNombre.Items.Clear();
+            foreach (Operador op in operadores)
+            {
+                cbNombre.Items.Add(op);
+            }
         }
 
         private void Salir(object sender, EventArgs e)
@@ -40,6 +47,11 @@ namespace Tickets_de_Petroleo
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+            CargarOperadores();
         }
     }
 }

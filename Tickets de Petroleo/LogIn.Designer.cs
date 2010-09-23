@@ -68,6 +68,7 @@
             // 
             // cbNombre
             // 
+            this.cbNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNombre.FormattingEnabled = true;
             this.cbNombre.Location = new System.Drawing.Point(74, 13);
             this.cbNombre.Name = "cbNombre";
@@ -107,6 +108,7 @@
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
