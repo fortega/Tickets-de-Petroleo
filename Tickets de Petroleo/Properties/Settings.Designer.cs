@@ -61,7 +61,7 @@ namespace Tickets_de_Petroleo.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=database;Initial Catalog=PETROLEO;Integrated Security=True")]
         public string db {
             get {
                 return ((string)(this["db"]));

@@ -12,7 +12,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="db" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Data Source=database;Initial Catalog=PETROLEO;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>
