@@ -90,6 +90,7 @@
             this.tbPasswd.Name = "tbPasswd";
             this.tbPasswd.Size = new System.Drawing.Size(121, 20);
             this.tbPasswd.TabIndex = 5;
+            this.tbPasswd.UseSystemPasswordChar = true;
             // 
             // LogIn
             // 
