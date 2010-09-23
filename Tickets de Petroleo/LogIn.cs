@@ -16,6 +16,10 @@ namespace Tickets_de_Petroleo
             InitializeComponent();
         }
 
+        private void CargarOperadores()
+        {
+        }
+
         private void Salir(object sender, EventArgs e)
         {
             this.Close();

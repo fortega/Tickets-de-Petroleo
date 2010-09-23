@@ -26,6 +26,12 @@ namespace Tickets_de_Petroleo
                 throw new Exception("Nombre o Password incorrecto");
         }
 
+        private Operador(string nombre, bool admin)
+        {
+            this.nombre = nombre;
+            this.admin = admin;
+        }
+
         public string Nombre
         {
             get { return nombre; }
@@ -39,6 +45,25 @@ namespace Tickets_de_Petroleo
         public override string ToString()
         {
             return nombre;
+        }
+
+        public static Operador[] getTodos()
+        {
+            DataTable dt;
+            using (Database db = new Database("SELECT * FROM operadores ORDER BY operador_nombre"))
+            {
+                dt = db.getData();
+            }
+
+            Operador[] r = new Operador[dt.Rows.Count];
+
+            for (int i = 0; i < r.Length; i++)
+            {
+                r[i] = new Operador((string)dt.Rows[i]["operador_nombre"],
+                    (bool)dt.Rows[i]["operador_admin"]);
+            }
+
+            return r;
         }
 
         private void setData(DataRow dr)
