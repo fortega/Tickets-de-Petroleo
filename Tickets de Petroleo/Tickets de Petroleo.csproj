@@ -61,34 +61,34 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedores\BombasMain.cs">
+    <Compile Include="BombasMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedores\BombasMain.Designer.cs">
+    <Compile Include="BombasMain.Designer.cs">
       <DependentUpon>BombasMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedores\CamionesMain.cs">
+    <Compile Include="CamionesMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedores\CamionesMain.Designer.cs">
+    <Compile Include="CamionesMain.Designer.cs">
       <DependentUpon>CamionesMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedores\ChoferesMain.cs">
+    <Compile Include="ChoferesMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedores\ChoferesMain.Designer.cs">
+    <Compile Include="ChoferesMain.Designer.cs">
       <DependentUpon>ChoferesMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedores\EmpresaMain.cs">
+    <Compile Include="EmpresaMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedores\EmpresaMain.Designer.cs">
+    <Compile Include="EmpresaMain.Designer.cs">
       <DependentUpon>EmpresaMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedores\OperadoresMain.cs">
+    <Compile Include="OperadoresMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedores\OperadoresMain.Designer.cs">
+    <Compile Include="OperadoresMain.Designer.cs">
       <DependentUpon>OperadoresMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Operador.cs" />

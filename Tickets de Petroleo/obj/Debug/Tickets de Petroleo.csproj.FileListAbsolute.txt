@@ -1,0 +1,10 @@
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\bin\Debug\Tickets de Petroleo.exe.config
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\bin\Debug\Tickets de Petroleo.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\bin\Debug\Tickets de Petroleo.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets_de_Petroleo.LogIn.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets_de_Petroleo.Properties.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets de Petroleo.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets de Petroleo.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets de Petroleo.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\Tickets-de-Petroleo\Tickets de Petroleo\obj\Debug\Tickets_de_Petroleo.Main.resources
