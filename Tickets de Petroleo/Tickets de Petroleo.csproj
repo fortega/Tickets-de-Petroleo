@@ -61,6 +61,36 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenedores\BombasMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\BombasMain.Designer.cs">
+      <DependentUpon>BombasMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\CamionesMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\CamionesMain.Designer.cs">
+      <DependentUpon>CamionesMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\ChoferesMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\ChoferesMain.Designer.cs">
+      <DependentUpon>ChoferesMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\EmpresaMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\EmpresaMain.Designer.cs">
+      <DependentUpon>EmpresaMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\OperadoresMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\OperadoresMain.Designer.cs">
+      <DependentUpon>OperadoresMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
