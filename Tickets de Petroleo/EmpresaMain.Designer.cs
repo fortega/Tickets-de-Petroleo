@@ -1,4 +1,4 @@
-﻿namespace Tickets_de_Petroleo.Mantenedores
+﻿namespace Tickets_de_Petroleo
 {
     partial class EmpresaMain
     {

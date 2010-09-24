@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Tickets_de_Petroleo.Mantenedores
+namespace Tickets_de_Petroleo
 {
     public partial class CamionesMain : Form
     {

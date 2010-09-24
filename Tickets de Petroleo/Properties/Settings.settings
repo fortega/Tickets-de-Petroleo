@@ -9,10 +9,10 @@
       <Value Profile="(Default)">password</Value>
     </Setting>
     <Setting Name="autouser_active" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="db" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=PETROLEO;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=database;Initial Catalog=PETROLEO;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>
