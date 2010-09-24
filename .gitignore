@@ -1,3 +1,5 @@
 Tickets de Petroleo/bin
-*.exe
+
+Tickets de Petroleo/obj
+*.suo
 Thumbs.db
