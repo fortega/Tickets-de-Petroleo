@@ -30,12 +30,12 @@
         {
             this.menu = new System.Windows.Forms.MenuStrip();
             this.mantenedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.operadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bombasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transportistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.choferesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.operadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bombasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,21 +56,8 @@
             this.operadoresToolStripMenuItem,
             this.bombasToolStripMenuItem});
             this.mantenedoresToolStripMenuItem.Name = "mantenedoresToolStripMenuItem";
-            this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.mantenedoresToolStripMenuItem.Text = "Mantenedores";
-            // 
-            // operadoresToolStripMenuItem
-            // 
-            this.operadoresToolStripMenuItem.Name = "operadoresToolStripMenuItem";
-            this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.operadoresToolStripMenuItem.Text = "Operadores";
-            this.operadoresToolStripMenuItem.Click += new System.EventHandler(this.abrir_operadoresMain);
-            // 
-            // bombasToolStripMenuItem
-            // 
-            this.bombasToolStripMenuItem.Name = "bombasToolStripMenuItem";
-            this.bombasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.bombasToolStripMenuItem.Text = "Bombas";
             // 
             // transportistasToolStripMenuItem
             // 
@@ -79,29 +66,43 @@
             this.camionesToolStripMenuItem1,
             this.choferesToolStripMenuItem1});
             this.transportistasToolStripMenuItem.Name = "transportistasToolStripMenuItem";
-            this.transportistasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.transportistasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.transportistasToolStripMenuItem.Text = "Transportistas";
             // 
             // asdToolStripMenuItem
             // 
             this.asdToolStripMenuItem.Name = "asdToolStripMenuItem";
-            this.asdToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.asdToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.asdToolStripMenuItem.Text = "Empresas";
             this.asdToolStripMenuItem.Click += new System.EventHandler(this.abrir_empresaMain);
             // 
             // camionesToolStripMenuItem1
             // 
             this.camionesToolStripMenuItem1.Name = "camionesToolStripMenuItem1";
-            this.camionesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.camionesToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.camionesToolStripMenuItem1.Text = "Camiones";
             this.camionesToolStripMenuItem1.Click += new System.EventHandler(this.abrir_camionesMain);
             // 
             // choferesToolStripMenuItem1
             // 
             this.choferesToolStripMenuItem1.Name = "choferesToolStripMenuItem1";
-            this.choferesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.choferesToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.choferesToolStripMenuItem1.Text = "Choferes";
             this.choferesToolStripMenuItem1.Click += new System.EventHandler(this.abrir_choferesMain);
+            // 
+            // operadoresToolStripMenuItem
+            // 
+            this.operadoresToolStripMenuItem.Name = "operadoresToolStripMenuItem";
+            this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.operadoresToolStripMenuItem.Text = "Operadores";
+            this.operadoresToolStripMenuItem.Click += new System.EventHandler(this.abrir_operadoresMain);
+            // 
+            // bombasToolStripMenuItem
+            // 
+            this.bombasToolStripMenuItem.Name = "bombasToolStripMenuItem";
+            this.bombasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.bombasToolStripMenuItem.Text = "Bombas";
+            this.bombasToolStripMenuItem.Click += new System.EventHandler(this.abrir_bombasMain);
             // 
             // Main
             // 
@@ -109,7 +110,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 271);
             this.Controls.Add(this.menu);
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menu;
             this.Name = "Main";
             this.Text = "Main";

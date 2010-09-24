@@ -13,40 +13,16 @@ namespace Tickets_de_Petroleo
     {
         private Operador operador;
 
-        private Form bombasForm, camionesForm, choferesForm, empresaForm, operadoresForm;
-
         public Main(Operador operador)
         {
             this.operador = operador;
 
             InitializeComponent();
 
-            if (operador.Admin)
-            {
-                abrirFormsHijos();
-            }
-            else
+            if (!operador.Admin)
             {
                 desactivaMenu();
             }
-        }
-
-        private void abrirFormsHijos()
-        {
-            this.bombasForm = new BombasMain(operador);
-            this.bombasForm.MdiParent = this;
-
-            this.camionesForm = new CamionesMain(operador);
-            this.camionesForm.MdiParent = this;
-
-            this.choferesForm = new ChoferesMain(operador);
-            this.choferesForm.MdiParent = this;
-
-            this.empresaForm = new EmpresaMain(operador);
-            this.empresaForm.MdiParent = this;
-
-            this.operadoresForm = new OperadoresMain(operador);
-            this.operadoresForm.MdiParent = this;
         }
 
         private void desactivaMenu()
@@ -56,22 +32,33 @@ namespace Tickets_de_Petroleo
 
         private void abrir_empresaMain(object sender, EventArgs e)
         {
-            empresaForm.Show();
+            EmpresaMain empresaForm = new EmpresaMain(operador);
+            empresaForm.ShowDialog();
         }
 
         private void abrir_camionesMain(object sender, EventArgs e)
         {
-            camionesForm.Show();
+            CamionesMain camionesForm = new CamionesMain(operador);
+            camionesForm.ShowDialog();
         }
 
         private void abrir_choferesMain(object sender, EventArgs e)
         {
-            operadoresForm.Show();
+            ChoferesMain choferesMain = new ChoferesMain(operador);
+            choferesMain.ShowDialog();
         }
 
         private void abrir_operadoresMain(object sender, EventArgs e)
         {
-            operadoresForm.Show();
+            OperadoresMain operadoresForm = new OperadoresMain(operador);
+            operadoresForm.ShowDialog();
+        }
+
+        private void abrir_bombasMain(object sender, EventArgs e)
+        {
+            BombasMain bombasForm = new BombasMain(operador);
+            bombasForm.ShowDialog();
+
         }
     }
 }
