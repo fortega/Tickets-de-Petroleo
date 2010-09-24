@@ -6,4 +6,4 @@ El petroleo cargado no puede ser mayor al indicado en el ticket de canje pero si
 No se puede ingresar un ticket a un chofer o camion si tiene un ticket que no ha entregado la guia.
 El programa tiene operadores “administradores” que pueden realizar ingreso de petroleo, modificar y crear usuario y modificar tickets de petroleo. Los usuarios que normales pueden crear tickets de canje y cerrar tickets de canje.
 
-Grabado por bruno
+Grabado por bruno y felipe
