@@ -60,5 +60,18 @@ namespace Tickets_de_Petroleo
             bombasForm.ShowDialog();
 
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void formClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
