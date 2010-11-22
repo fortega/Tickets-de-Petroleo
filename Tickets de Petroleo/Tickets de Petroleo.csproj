@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="Empresa.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,15 @@
     <Compile Include="Operador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BombasMain.resx">
+      <DependentUpon>BombasMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamionesMain.resx">
+      <DependentUpon>CamionesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoferesMain.resx">
+      <DependentUpon>ChoferesMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmpresaMain.resx">
       <DependentUpon>EmpresaMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperadoresMain.resx">
+      <DependentUpon>OperadoresMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

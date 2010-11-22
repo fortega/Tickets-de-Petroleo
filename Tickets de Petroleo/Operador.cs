@@ -66,6 +66,11 @@ namespace Tickets_de_Petroleo
             return r;
         }
 
+        public static void Crear(string nombre, string password, bool admin)
+        {
+            //TODO
+        }
+
         private void setData(DataRow dr)
         {
             this.nombre = (string)dr["operador_nombre"];
