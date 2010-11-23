@@ -17,5 +17,19 @@ namespace Tickets_de_Petroleo
             this.operador = operador;
             InitializeComponent();
         }
+
+        private void CargarDatos()
+        {
+            //TODO
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            EmpresaCrear frm = new EmpresaCrear();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                CargarDatos();
+            }
+        }
     }
 }

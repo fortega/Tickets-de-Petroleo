@@ -31,9 +31,9 @@
             this.layout = new System.Windows.Forms.TableLayoutPanel();
             this.gv = new System.Windows.Forms.DataGridView();
             this.pnlBotones = new System.Windows.Forms.Panel();
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.pnlBotones.SuspendLayout();
@@ -79,14 +79,14 @@
             this.pnlBotones.Size = new System.Drawing.Size(84, 452);
             this.pnlBotones.TabIndex = 1;
             // 
-            // btnCrear
+            // btnBorrar
             // 
-            this.btnCrear.Location = new System.Drawing.Point(4, 10);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(75, 23);
-            this.btnCrear.TabIndex = 0;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnBorrar.Location = new System.Drawing.Point(4, 70);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.TabIndex = 2;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
@@ -97,14 +97,15 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // btnBorrar
+            // btnCrear
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(4, 70);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrar.TabIndex = 2;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnCrear.Location = new System.Drawing.Point(4, 10);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(75, 23);
+            this.btnCrear.TabIndex = 0;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // EmpresaMain
             // 
