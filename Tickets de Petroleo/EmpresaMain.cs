@@ -30,9 +30,7 @@ namespace Tickets_de_Petroleo
         {
             EmpresaCrear frm = new EmpresaCrear();
             if (frm.ShowDialog() == DialogResult.OK)
-            {
                 CargarDatos();
-            }
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -47,6 +45,15 @@ namespace Tickets_de_Petroleo
                 seleccion.Borrar();
                 CargarDatos();
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Empresa seleccion = (Empresa)gv.SelectedRows[0].DataBoundItem;
+            EmpresaCrear frm = new EmpresaCrear(seleccion.Rut, seleccion.Nombre);
+            if (frm.ShowDialog() == DialogResult.OK)
+                CargarDatos();
+
         }
     }
 }

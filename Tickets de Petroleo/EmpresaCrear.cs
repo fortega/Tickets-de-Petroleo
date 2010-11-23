@@ -11,21 +11,40 @@ namespace Tickets_de_Petroleo
 {
     public partial class EmpresaCrear : Form
     {
+        bool editar = false;
         public EmpresaCrear()
         {
             InitializeComponent();
             this.DialogResult = DialogResult.Cancel;
         }
 
+        public EmpresaCrear(int rut, string nombre) :
+            this()
+        {
+            editar = true;
+            txtRut.Value = rut;
+            txtNombre.Text = nombre;
+
+            this.Text = "Editar Empresa";
+            btnCrear.Text = "Editar";
+
+            txtRut.Enabled = false;
+        }
+
         private void btnCrear_Click(object sender, EventArgs e)
         {
             try
             {
-                int rut = int.Parse(txtRut.Text);
+                int rut = int.Parse(txtRut.Value.ToString());
                 string nombre = txtNombre.Text;
 
                 Empresa empresa = new Empresa(rut, nombre);
-                empresa.Crear();
+
+                if (editar)
+                    empresa.Guardar();
+                else
+                    empresa.Crear();
+
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
