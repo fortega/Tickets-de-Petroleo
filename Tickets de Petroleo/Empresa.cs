@@ -30,7 +30,7 @@ namespace Tickets_de_Petroleo
 
         public void Crear()
         {
-            string sql = "INSERT INTO empresas (rut, nombre) values (@rut,@nombre)";
+            string sql = "INSERT INTO empresas (empresa_rut, empresa_nombre) values (@rut,@nombre)";
             Database db = new Database(sql);
             db.addParameter("@rut", System.Data.SqlDbType.Int, rut);
             db.addParameter("@nombre", System.Data.SqlDbType.VarChar, nombre);
@@ -39,7 +39,7 @@ namespace Tickets_de_Petroleo
 
         public void Guardar()
         {
-            string sql = "UPDATE empresas SET nombre = @nombre WHERE rut = @rut";
+            string sql = "UPDATE empresas SET empresa_nombre = @nombre WHERE empresa_rut = @rut";
             Database db = new Database(sql);
             db.addParameter("@rut", System.Data.SqlDbType.Int, rut);
             db.addParameter("@nombre", System.Data.SqlDbType.VarChar, nombre);
@@ -48,7 +48,7 @@ namespace Tickets_de_Petroleo
 
         public void Borrar()
         {
-            string sql = "DELETE FROM empresas WHERE rut = @rut";
+            string sql = "DELETE FROM empresas WHERE empresa_rut = @rut";
             Database db = new Database(sql);
             db.addParameter("@rut", System.Data.SqlDbType.Int, rut);
             db.execute();
@@ -58,7 +58,7 @@ namespace Tickets_de_Petroleo
         {
             get
             {
-                string sql = "SELECT * FROM empresas ORDER BY nombre";
+                string sql = "SELECT * FROM empresas ORDER BY empresa_nombre";
                 DataTable dt;
                 using(Database db = new Database(sql)){
                     dt = db.getData();

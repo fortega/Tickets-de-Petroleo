@@ -58,7 +58,7 @@
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menu.Size = new System.Drawing.Size(606, 24);
+            this.menu.Size = new System.Drawing.Size(287, 24);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
@@ -69,7 +69,7 @@
             this.operadoresToolStripMenuItem,
             this.bombasToolStripMenuItem});
             this.mantenedoresToolStripMenuItem.Name = "mantenedoresToolStripMenuItem";
-            this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.mantenedoresToolStripMenuItem.Text = "Mantenedores";
             // 
             // transportistasToolStripMenuItem
@@ -79,55 +79,55 @@
             this.camionesToolStripMenuItem1,
             this.choferesToolStripMenuItem1});
             this.transportistasToolStripMenuItem.Name = "transportistasToolStripMenuItem";
-            this.transportistasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.transportistasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.transportistasToolStripMenuItem.Text = "Transportistas";
             // 
             // asdToolStripMenuItem
             // 
             this.asdToolStripMenuItem.Name = "asdToolStripMenuItem";
-            this.asdToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.asdToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.asdToolStripMenuItem.Text = "Empresas";
             this.asdToolStripMenuItem.Click += new System.EventHandler(this.abrir_empresaMain);
             // 
             // camionesToolStripMenuItem1
             // 
             this.camionesToolStripMenuItem1.Name = "camionesToolStripMenuItem1";
-            this.camionesToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.camionesToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.camionesToolStripMenuItem1.Text = "Camiones";
             this.camionesToolStripMenuItem1.Click += new System.EventHandler(this.abrir_camionesMain);
             // 
             // choferesToolStripMenuItem1
             // 
             this.choferesToolStripMenuItem1.Name = "choferesToolStripMenuItem1";
-            this.choferesToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.choferesToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.choferesToolStripMenuItem1.Text = "Choferes";
             this.choferesToolStripMenuItem1.Click += new System.EventHandler(this.abrir_choferesMain);
             // 
             // operadoresToolStripMenuItem
             // 
             this.operadoresToolStripMenuItem.Name = "operadoresToolStripMenuItem";
-            this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.operadoresToolStripMenuItem.Text = "Operadores";
             this.operadoresToolStripMenuItem.Click += new System.EventHandler(this.abrir_operadoresMain);
             // 
             // bombasToolStripMenuItem
             // 
             this.bombasToolStripMenuItem.Name = "bombasToolStripMenuItem";
-            this.bombasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.bombasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bombasToolStripMenuItem.Text = "Bombas";
             this.bombasToolStripMenuItem.Click += new System.EventHandler(this.abrir_bombasMain);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // lblPatente
             // 
             this.lblPatente.AutoSize = true;
-            this.lblPatente.Location = new System.Drawing.Point(51, 60);
+            this.lblPatente.Location = new System.Drawing.Point(16, 32);
             this.lblPatente.Name = "lblPatente";
             this.lblPatente.Size = new System.Drawing.Size(47, 13);
             this.lblPatente.TabIndex = 1;
@@ -136,7 +136,7 @@
             // lblEmpresa
             // 
             this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.Location = new System.Drawing.Point(47, 86);
+            this.lblEmpresa.Location = new System.Drawing.Point(12, 58);
             this.lblEmpresa.Name = "lblEmpresa";
             this.lblEmpresa.Size = new System.Drawing.Size(51, 13);
             this.lblEmpresa.TabIndex = 2;
@@ -145,7 +145,7 @@
             // lblChofer
             // 
             this.lblChofer.AutoSize = true;
-            this.lblChofer.Location = new System.Drawing.Point(57, 112);
+            this.lblChofer.Location = new System.Drawing.Point(22, 84);
             this.lblChofer.Name = "lblChofer";
             this.lblChofer.Size = new System.Drawing.Size(41, 13);
             this.lblChofer.TabIndex = 3;
@@ -154,7 +154,7 @@
             // lblLitros
             // 
             this.lblLitros.AutoSize = true;
-            this.lblLitros.Location = new System.Drawing.Point(63, 139);
+            this.lblLitros.Location = new System.Drawing.Point(28, 111);
             this.lblLitros.Name = "lblLitros";
             this.lblLitros.Size = new System.Drawing.Size(35, 13);
             this.lblLitros.TabIndex = 4;
@@ -162,21 +162,21 @@
             // 
             // txtPatente
             // 
-            this.txtPatente.Location = new System.Drawing.Point(104, 57);
+            this.txtPatente.Location = new System.Drawing.Point(69, 29);
             this.txtPatente.Name = "txtPatente";
             this.txtPatente.Size = new System.Drawing.Size(121, 20);
             this.txtPatente.TabIndex = 5;
             // 
             // txtEmpresa
             // 
-            this.txtEmpresa.Location = new System.Drawing.Point(104, 83);
+            this.txtEmpresa.Location = new System.Drawing.Point(69, 55);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(202, 20);
             this.txtEmpresa.TabIndex = 6;
             // 
             // txtLitros
             // 
-            this.txtLitros.Location = new System.Drawing.Point(104, 136);
+            this.txtLitros.Location = new System.Drawing.Point(69, 108);
             this.txtLitros.Name = "txtLitros";
             this.txtLitros.Size = new System.Drawing.Size(202, 20);
             this.txtLitros.TabIndex = 8;
@@ -184,14 +184,14 @@
             // ddlChofer
             // 
             this.ddlChofer.FormattingEnabled = true;
-            this.ddlChofer.Location = new System.Drawing.Point(104, 109);
+            this.ddlChofer.Location = new System.Drawing.Point(69, 81);
             this.ddlChofer.Name = "ddlChofer";
             this.ddlChofer.Size = new System.Drawing.Size(202, 21);
             this.ddlChofer.TabIndex = 9;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(231, 55);
+            this.btnBuscar.Location = new System.Drawing.Point(196, 27);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 10;
@@ -200,7 +200,7 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(231, 162);
+            this.btnCrear.Location = new System.Drawing.Point(196, 134);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(75, 23);
             this.btnCrear.TabIndex = 11;
@@ -211,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 421);
+            this.ClientSize = new System.Drawing.Size(287, 173);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.ddlChofer);
@@ -223,6 +223,7 @@
             this.Controls.Add(this.lblEmpresa);
             this.Controls.Add(this.lblPatente);
             this.Controls.Add(this.menu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menu;
             this.Name = "Main";
             this.Text = "Main";

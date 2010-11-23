@@ -65,6 +65,7 @@
             this.gv.MultiSelect = false;
             this.gv.Name = "gv";
             this.gv.ReadOnly = true;
+            this.gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gv.Size = new System.Drawing.Size(670, 452);
             this.gv.TabIndex = 0;
             // 
@@ -87,6 +88,7 @@
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 

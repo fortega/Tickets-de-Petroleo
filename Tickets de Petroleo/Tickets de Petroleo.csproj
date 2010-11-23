@@ -50,6 +50,12 @@
   <ItemGroup>
     <Compile Include="Database.cs" />
     <Compile Include="Empresa.cs" />
+    <Compile Include="EmpresaCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpresaCrear.Designer.cs">
+      <DependentUpon>EmpresaCrear.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChoferesMain.resx">
       <DependentUpon>ChoferesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpresaCrear.resx">
+      <DependentUpon>EmpresaCrear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpresaMain.resx">
       <DependentUpon>EmpresaMain.cs</DependentUpon>

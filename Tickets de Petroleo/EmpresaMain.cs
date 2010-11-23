@@ -16,11 +16,14 @@ namespace Tickets_de_Petroleo
         {
             this.operador = operador;
             InitializeComponent();
+
+            CargarDatos();
         }
 
         private void CargarDatos()
         {
-            //TODO
+            Empresa[] empresas = Empresa.Todos;
+            gv.DataSource = empresas;
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -28,6 +31,20 @@ namespace Tickets_de_Petroleo
             EmpresaCrear frm = new EmpresaCrear();
             if (frm.ShowDialog() == DialogResult.OK)
             {
+                CargarDatos();
+            }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Empresa seleccion = (Empresa)gv.SelectedRows[0].DataBoundItem;
+            if (MessageBox.Show("Desea borrar \"" + seleccion.Nombre + "\"?",
+                "Confirmacion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                seleccion.Borrar();
                 CargarDatos();
             }
         }

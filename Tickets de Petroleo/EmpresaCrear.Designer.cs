@@ -30,9 +30,10 @@
         {
             this.lblRut = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtRut = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnCrear = new System.Windows.Forms.Button();
+            this.txtRut = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRut)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRut
@@ -53,13 +54,6 @@
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
-            // txtRut
-            // 
-            this.txtRut.Location = new System.Drawing.Point(65, 12);
-            this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(100, 20);
-            this.txtRut.TabIndex = 2;
-            // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(65, 39);
@@ -77,24 +71,44 @@
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
+            // txtRut
+            // 
+            this.txtRut.Location = new System.Drawing.Point(65, 13);
+            this.txtRut.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.txtRut.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtRut.Name = "txtRut";
+            this.txtRut.Size = new System.Drawing.Size(100, 20);
+            this.txtRut.TabIndex = 5;
+            this.txtRut.ThousandsSeparator = true;
+            this.txtRut.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // EmpresaCrear
             // 
             this.AcceptButton = this.btnCrear;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(181, 100);
+            this.ClientSize = new System.Drawing.Size(175, 98);
+            this.Controls.Add(this.txtRut);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtRut);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblRut);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EmpresaCrear";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.Text = "EmpresaCrear";
+            this.Text = "Crear Empresa";
+            ((System.ComponentModel.ISupportInitialize)(this.txtRut)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,8 +118,8 @@
 
         private System.Windows.Forms.Label lblRut;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtRut;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.NumericUpDown txtRut;
     }
 }
