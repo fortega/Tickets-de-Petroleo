@@ -6,8 +6,9 @@ using System.Data;
 
 namespace Tickets_de_Petroleo
 {
-    class Camion
+    public class Camion
     {
+        const string validaPatente = "(\\w{2}\\d{4})|(\\w{4}\\d{2})";
         private Empresa empresa;
         private string patente;
 
@@ -28,13 +29,25 @@ namespace Tickets_de_Petroleo
             get { return patente; }
         }
 
+        private bool patenteValida
+        {
+            get
+            {
+                return RegexValidator.Validate(validaPatente, patente);
+            }
+        }
+
         public void Crear()
         {
-            string sql = "INSERT INTO camiones (camion_patente, empresa_rut) VALUES (@patente, @rut)";
-            Database db = new Database(sql);
-            db.addParameter("@patente", System.Data.SqlDbType.VarChar, patente);
-            db.addParameter("@rut", System.Data.SqlDbType.Int, empresa.Rut);
-            db.execute();
+            if (patenteValida)
+            {
+                string sql = "INSERT INTO camiones (camion_patente, empresa_rut) VALUES (@patente, @rut)";
+                Database db = new Database(sql);
+                db.addParameter("@patente", System.Data.SqlDbType.VarChar, patente);
+                db.addParameter("@rut", System.Data.SqlDbType.Int, empresa.Rut);
+                db.execute();
+            }else
+                throw new Exception("Patente invalida. Debe seguir la forma \"AB1234\" o \"ABCD12\".");
         }
 
         public void Guardar()
@@ -66,7 +79,7 @@ namespace Tickets_de_Petroleo
                 List<Camion> resultado = new List<Camion>();
                 using(Database db = new Database(sql))
                 {
-                    DataTable dt = new DataTable();
+                    DataTable dt = db.getData();
                     foreach (DataRow dr in dt.Rows)
                     {
                         resultado.Add(

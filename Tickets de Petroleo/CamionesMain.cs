@@ -39,5 +39,21 @@ namespace Tickets_de_Petroleo
                 CargarDatos();
             }
         }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            CamionCrear frm = new CamionCrear();
+            if (frm.ShowDialog() == DialogResult.OK)
+                CargarDatos();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Camion seleccionado = (Camion)gv.SelectedRows[0].DataBoundItem;
+
+            CamionCrear frm = new CamionCrear(seleccionado);
+            if (frm.ShowDialog() == DialogResult.OK)
+                CargarDatos();
+        }
     }
 }

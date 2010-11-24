@@ -6,7 +6,7 @@ using System.Data;
 
 namespace Tickets_de_Petroleo
 {
-    class Empresa
+    public class Empresa
     {
         private int rut;
         private string nombre;
@@ -52,6 +52,11 @@ namespace Tickets_de_Petroleo
             Database db = new Database(sql);
             db.addParameter("@rut", System.Data.SqlDbType.Int, rut);
             db.execute();
+        }
+
+        public override string ToString()
+        {
+            return string.Concat(nombre, " / " + rut);
         }
 
         public static Empresa[] Todos
