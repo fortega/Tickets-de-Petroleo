@@ -46,6 +46,26 @@ namespace Tickets_de_Petroleo
             db.execute();
         }
 
+        public void Guardar()
+        {
+            string sql = "UPDATE choferes SET empresa_rut = @empresa ,chofer_nombre = @nombre WHERE chofer_rut = @rut";
+            Database db = new Database(sql);
+            db.addParameter("@empresa", System.Data.SqlDbType.Int, empresa.Rut);
+            db.addParameter("@rut", System.Data.SqlDbType.Int, rut);
+            db.addParameter("@nombre", System.Data.SqlDbType.VarChar, nombre);
+            db.execute();
+        }
+
+        public void Borrar()
+        {
+            string sql = "DELETE FROM choferes WHERE chofer_rut = @rut";
+            Database db = new Database(sql);
+            db.addParameter("@empresa", System.Data.SqlDbType.Int, empresa.Rut);
+            db.addParameter("@rut", System.Data.SqlDbType.Int, rut);
+            db.addParameter("@nombre", System.Data.SqlDbType.VarChar, nombre);
+            db.execute();
+        }
+
         public static Chofer[] Todos
         {
             get

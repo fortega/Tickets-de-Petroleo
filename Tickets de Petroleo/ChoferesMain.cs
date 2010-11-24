@@ -25,5 +25,35 @@ namespace Tickets_de_Petroleo
             Chofer[] choferes = Chofer.Todos;
             gv.DataSource = choferes;
         }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            ChoferCrear frm = new ChoferCrear();
+            if (frm.ShowDialog() == DialogResult.OK)
+                CargarDatos();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Chofer seleccionado = (Chofer)gv.SelectedRows[0].DataBoundItem;
+
+            if (MessageBox.Show("Desea borrar \"" + seleccionado.Nombre + "\"?",
+                "Borrar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                seleccionado.Borrar();
+                CargarDatos();
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Chofer seleccionado = (Chofer)gv.SelectedRows[0].DataBoundItem;
+            ChoferCrear frm = new ChoferCrear(seleccionado);
+            if (frm.ShowDialog() == DialogResult.OK)
+                CargarDatos();
+        }
     }
 }

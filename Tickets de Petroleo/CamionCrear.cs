@@ -41,14 +41,7 @@ namespace Tickets_de_Petroleo
 
         private void seleccionaEmpresa(Empresa empresa)
         {
-            int i = 0;
-            foreach (Empresa item in ddlEmpresa.Items)
-            {
-                if (empresa.Rut == item.Rut)
-                    break;
-                i++;
-            }
-            ddlEmpresa.SelectedIndex = i;
+            FormUtil.SeleccionaEmpresa(ref ddlEmpresa, empresa);
         }
 
         private void CargarEmpresas()
@@ -76,6 +69,7 @@ namespace Tickets_de_Petroleo
                     camion.Crear();
 
                 this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {

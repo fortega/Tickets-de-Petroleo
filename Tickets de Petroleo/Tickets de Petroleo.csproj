@@ -56,6 +56,12 @@
       <DependentUpon>CamionCrear.cs</DependentUpon>
     </Compile>
     <Compile Include="Chofer.cs" />
+    <Compile Include="ChoferCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoferCrear.Designer.cs">
+      <DependentUpon>ChoferCrear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="Empresa.cs" />
     <Compile Include="EmpresaCrear.cs">
@@ -64,6 +70,7 @@
     <Compile Include="EmpresaCrear.Designer.cs">
       <DependentUpon>EmpresaCrear.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUtil.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CamionesMain.resx">
       <DependentUpon>CamionesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoferCrear.resx">
+      <DependentUpon>ChoferCrear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChoferesMain.resx">
       <DependentUpon>ChoferesMain.cs</DependentUpon>
