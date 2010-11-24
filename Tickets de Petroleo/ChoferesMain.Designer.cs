@@ -51,7 +51,7 @@
             this.layout.Name = "layout";
             this.layout.RowCount = 1;
             this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout.Size = new System.Drawing.Size(284, 262);
+            this.layout.Size = new System.Drawing.Size(604, 551);
             this.layout.TabIndex = 1;
             // 
             // gv
@@ -65,7 +65,8 @@
             this.gv.MultiSelect = false;
             this.gv.Name = "gv";
             this.gv.ReadOnly = true;
-            this.gv.Size = new System.Drawing.Size(188, 452);
+            this.gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gv.Size = new System.Drawing.Size(508, 545);
             this.gv.TabIndex = 0;
             // 
             // pnlBotones
@@ -74,9 +75,9 @@
             this.pnlBotones.Controls.Add(this.btnEditar);
             this.pnlBotones.Controls.Add(this.btnCrear);
             this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBotones.Location = new System.Drawing.Point(197, 3);
+            this.pnlBotones.Location = new System.Drawing.Point(517, 3);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(84, 452);
+            this.pnlBotones.Size = new System.Drawing.Size(84, 545);
             this.pnlBotones.TabIndex = 1;
             // 
             // btnBorrar
@@ -110,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(604, 551);
             this.Controls.Add(this.layout);
             this.Name = "ChoferesMain";
             this.Text = "ChoferesMain";

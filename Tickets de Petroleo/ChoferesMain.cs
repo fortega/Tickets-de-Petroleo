@@ -16,6 +16,14 @@ namespace Tickets_de_Petroleo
         {
             this.operador = operador;
             InitializeComponent();
+
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            Chofer[] choferes = Chofer.Todos;
+            gv.DataSource = choferes;
         }
     }
 }

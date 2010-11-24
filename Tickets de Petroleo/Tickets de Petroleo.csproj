@@ -55,6 +55,7 @@
     <Compile Include="CamionCrear.Designer.cs">
       <DependentUpon>CamionCrear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chofer.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Empresa.cs" />
     <Compile Include="EmpresaCrear.cs">
