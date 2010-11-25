@@ -16,6 +16,42 @@ namespace Tickets_de_Petroleo
         {
             this.operador = operador;
             InitializeComponent();
+            CargarDatos();
+        }
+
+        public void CargarDatos()
+        {
+            Operador[] operadores = Operador.Todos;
+            gv.DataSource = operadores;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Operador seleccion = (Operador)gv.SelectedRows[0].DataBoundItem;
+            if (MessageBox.Show("Desea borrar \"" + seleccion.Nombre + "\"?",
+                "Confirmacion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                seleccion.Borrar();
+                CargarDatos();
+            }
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            OperadoresCrear frm = new OperadoresCrear();
+            if (frm.ShowDialog() == DialogResult.OK)
+                CargarDatos();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Operador seleccion = (Operador)gv.SelectedRows[0].DataBoundItem;
+            OperadoresCrear frm = new OperadoresCrear(seleccion);
+            if (frm.ShowDialog() == DialogResult.OK)
+                CargarDatos();
         }
     }
 }

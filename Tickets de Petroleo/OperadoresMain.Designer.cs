@@ -51,7 +51,7 @@
             this.layout.Name = "layout";
             this.layout.RowCount = 1;
             this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout.Size = new System.Drawing.Size(284, 262);
+            this.layout.Size = new System.Drawing.Size(468, 471);
             this.layout.TabIndex = 1;
             // 
             // gv
@@ -65,7 +65,8 @@
             this.gv.MultiSelect = false;
             this.gv.Name = "gv";
             this.gv.ReadOnly = true;
-            this.gv.Size = new System.Drawing.Size(188, 452);
+            this.gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gv.Size = new System.Drawing.Size(372, 465);
             this.gv.TabIndex = 0;
             // 
             // pnlBotones
@@ -74,9 +75,9 @@
             this.pnlBotones.Controls.Add(this.btnEditar);
             this.pnlBotones.Controls.Add(this.btnCrear);
             this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBotones.Location = new System.Drawing.Point(197, 3);
+            this.pnlBotones.Location = new System.Drawing.Point(381, 3);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(84, 452);
+            this.pnlBotones.Size = new System.Drawing.Size(84, 465);
             this.pnlBotones.TabIndex = 1;
             // 
             // btnBorrar
@@ -87,6 +88,7 @@
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 
@@ -96,6 +98,7 @@
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCrear
             // 
@@ -105,12 +108,13 @@
             this.btnCrear.TabIndex = 0;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // OperadoresMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(468, 471);
             this.Controls.Add(this.layout);
             this.Name = "OperadoresMain";
             this.Text = "OperadoresMain";

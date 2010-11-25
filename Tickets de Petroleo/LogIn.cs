@@ -18,7 +18,7 @@ namespace Tickets_de_Petroleo
 
         private void CargarOperadores()
         {
-            Operador[] operadores = Operador.getTodos();
+            Operador[] operadores = Operador.Todos;
 
             cbNombre.Items.Clear();
             foreach (Operador op in operadores)

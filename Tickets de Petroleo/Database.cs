@@ -12,15 +12,20 @@ namespace Tickets_de_Petroleo
         private SqlConnection con;
         private string sql;
         private List<SqlParameter> parameters;
+        private CommandType commandType;
 
-        public Database(string sql)
+        public Database(string sql, CommandType commandType)
         {
             this.sql = sql;
+            this.commandType = commandType;
             this.parameters = new List<SqlParameter>();
 
             this.con = new SqlConnection(Properties.Settings.Default.db);
             con.Open();
         }
+        public Database(string sql)
+            : this(sql, CommandType.Text)
+        { }
 
         public void addParameter(string name, SqlDbType type, object value)
         {
@@ -44,6 +49,7 @@ namespace Tickets_de_Petroleo
         public void execute()
         {
             SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = commandType;
 
             foreach (SqlParameter param in parameters)
             {
@@ -56,6 +62,7 @@ namespace Tickets_de_Petroleo
         public DataTable getData()
         {
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            da.SelectCommand.CommandType = commandType;
 
             foreach (SqlParameter param in parameters)
             {

@@ -107,6 +107,12 @@
     <Compile Include="EmpresaMain.Designer.cs">
       <DependentUpon>EmpresaMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="OperadoresCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperadoresCrear.Designer.cs">
+      <DependentUpon>OperadoresCrear.cs</DependentUpon>
+    </Compile>
     <Compile Include="OperadoresMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperadoresCrear.resx">
+      <DependentUpon>OperadoresCrear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OperadoresMain.resx">
       <DependentUpon>OperadoresMain.cs</DependentUpon>

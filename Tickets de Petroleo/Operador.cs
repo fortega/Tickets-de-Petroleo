@@ -9,8 +9,16 @@ namespace Tickets_de_Petroleo
 {
     public class Operador
     {
-        private string nombre;
+        const int minNombre = 5, minPasswd = 4;
+        private string nombre, passwd;
         private bool admin;
+
+        public Operador(string nombre, string passwd, bool admin)
+        {
+            this.nombre = nombre;
+            this.passwd = passwd;
+            this.admin = admin;
+        }
 
         public Operador(string nombre, string passwd)
         {
@@ -47,34 +55,74 @@ namespace Tickets_de_Petroleo
             return (admin ? "+ " : "- ") + nombre;
         }
 
-        public static Operador[] getTodos()
+        public static Operador[] Todos
         {
-            DataTable dt;
-            using (Database db = new Database("SELECT * FROM operadores ORDER BY operador_nombre"))
+            get
             {
-                dt = db.getData();
+                DataTable dt;
+                using (Database db = new Database("SELECT * FROM operadores ORDER BY operador_nombre"))
+                {
+                    dt = db.getData();
+                }
+
+                Operador[] r = new Operador[dt.Rows.Count];
+
+                for (int i = 0; i < r.Length; i++)
+                {
+                    r[i] = new Operador((string)dt.Rows[i]["operador_nombre"],
+                        (bool)dt.Rows[i]["operador_admin"]);
+                }
+
+                return r;
             }
-
-            Operador[] r = new Operador[dt.Rows.Count];
-
-            for (int i = 0; i < r.Length; i++)
-            {
-                r[i] = new Operador((string)dt.Rows[i]["operador_nombre"],
-                    (bool)dt.Rows[i]["operador_admin"]);
-            }
-
-            return r;
         }
 
-        public static void Crear(string nombre, string password, bool admin)
+        public void Crear()
         {
-            //TODO
+            if (nombre.Length < minNombre)
+                throw new Exception(string.Concat("Nombre debe tener al menos ", minNombre, " caracteres"));
+            else if (passwd.Length < minPasswd)
+                throw new Exception(string.Concat("Passwd debe tener al menos ", minPasswd, " caracteres"));
+            else
+            {
+                string sql = "INSERT INTO operadores (operador_nombre, operador_passwd, operador_admin) VALUES (@nombre,@passwd,@admin)";
+                Database db = new Database(sql);
+                db.addParameter("@nombre", SqlDbType.VarChar, nombre);
+                db.addParameter("@passwd", SqlDbType.VarChar, passwd);
+                db.addParameter("@admin", SqlDbType.Bit, admin);
+                db.execute();
+            }
+        }
+
+        public void Guardar()
+        {
+            if (passwd.Length < minPasswd)
+                throw new Exception(string.Concat("Passwd debe tener al menos ", minPasswd, " caracteres"));
+            else
+            {
+                string sql = "UPDATE operadores SET operador_passwd = @passw, operador_admin = @admin WHERE operador_nombre = @nombre";
+                Database db = new Database(sql);
+                db.addParameter("@nombre", SqlDbType.VarChar, nombre);
+                db.addParameter("@passwd", SqlDbType.VarChar, passwd);
+                db.addParameter("@admin", SqlDbType.Bit, admin);
+                db.execute();
+            }
+        }
+
+        public void Borrar()
+        {
+            string sql = "DELETE FROM operadores WHERE operador_nombre = @nombre";
+            Database db = new Database(sql);
+            db.addParameter("@nombre", SqlDbType.VarChar, nombre);
+            db.execute();
         }
 
         private void setData(DataRow dr)
         {
             this.nombre = (string)dr["operador_nombre"];
+            this.nombre = (string)dr["operador_passwd"];
             this.admin = (bool)dr["operador_admin"];
         }
+
     }
 }
