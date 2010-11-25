@@ -48,6 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bomba.cs" />
+    <Compile Include="BombaCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BombaCrear.Designer.cs">
+      <DependentUpon>BombaCrear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Camion.cs" />
     <Compile Include="CamionCrear.cs">
       <SubType>Form</SubType>

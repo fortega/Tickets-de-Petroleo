@@ -17,5 +17,11 @@ namespace Tickets_de_Petroleo
             this.operador = operador;
             InitializeComponent();
         }
+
+        private void CargarDatos()
+        {
+            Bomba[] bombas = Bomba.Todos;
+            gv.DataSource = bombas;
+        }
     }
 }
