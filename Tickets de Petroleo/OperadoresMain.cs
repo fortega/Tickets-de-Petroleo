@@ -23,6 +23,8 @@ namespace Tickets_de_Petroleo
         {
             Operador[] operadores = Operador.Todos;
             gv.DataSource = operadores;
+
+            btnEditar.Enabled = btnBorrar.Enabled = (operadores.Length > 0 & operador.Admin);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)

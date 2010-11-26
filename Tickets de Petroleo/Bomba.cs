@@ -47,7 +47,7 @@ namespace Tickets_de_Petroleo
 
         public void Borrar()
         {
-            string sql = "DELETE from bombas (bomba_id) VALUES (@id)";
+            string sql = "DELETE from bombas  WHERE bomba_id = @id";
             Database db = new Database(sql);
             db.addParameter("id", SqlDbType.SmallInt, id);
             db.execute();

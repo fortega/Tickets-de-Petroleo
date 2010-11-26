@@ -24,6 +24,8 @@ namespace Tickets_de_Petroleo
         {
             Empresa[] empresas = Empresa.Todos;
             gv.DataSource = empresas;
+
+            btnEditar.Enabled = btnBorrar.Enabled = (empresas.Length > 0 & operador.Admin);
         }
 
         private void btnCrear_Click(object sender, EventArgs e)

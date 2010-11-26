@@ -24,6 +24,8 @@ namespace Tickets_de_Petroleo
         {
             Camion[] camiones = Camion.Todos;
             gv.DataSource = camiones;
+
+            btnEditar.Enabled = btnBorrar.Enabled = (camiones.Length > 0 & operador.Admin);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)

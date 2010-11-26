@@ -27,7 +27,7 @@ namespace Tickets_de_Petroleo
 
         private void desactivaMenu()
         {
-            menu.Enabled = false;
+            operadoresToolStripMenuItem.Enabled = false;
         }
 
         private void abrir_empresaMain(object sender, EventArgs e)

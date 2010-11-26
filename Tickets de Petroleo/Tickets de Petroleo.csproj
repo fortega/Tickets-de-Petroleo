@@ -129,6 +129,9 @@
     <Compile Include="Operador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BombaCrear.resx">
+      <DependentUpon>BombaCrear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BombasMain.resx">
       <DependentUpon>BombasMain.cs</DependentUpon>
     </EmbeddedResource>
