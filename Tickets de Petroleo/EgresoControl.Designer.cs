@@ -31,7 +31,7 @@
             this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.egLblLitros = new System.Windows.Forms.Label();
             this.txtLitros = new System.Windows.Forms.NumericUpDown();
-            this.egBtnCrear = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.egLblBomba = new System.Windows.Forms.Label();
             this.egLblEmpresa = new System.Windows.Forms.Label();
             this.egLblChofer = new System.Windows.Forms.Label();
@@ -83,16 +83,16 @@
             0,
             0});
             // 
-            // egBtnCrear
+            // btnCrear
             // 
-            this.egBtnCrear.Enabled = false;
-            this.egBtnCrear.Location = new System.Drawing.Point(70, 150);
-            this.egBtnCrear.Name = "egBtnCrear";
-            this.egBtnCrear.Size = new System.Drawing.Size(75, 23);
-            this.egBtnCrear.TabIndex = 19;
-            this.egBtnCrear.Text = "Crear";
-            this.egBtnCrear.UseVisualStyleBackColor = true;
-            this.egBtnCrear.Click += new System.EventHandler(this.egBtnCrear_Click);
+            this.btnCrear.Enabled = false;
+            this.btnCrear.Location = new System.Drawing.Point(70, 150);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(75, 23);
+            this.btnCrear.TabIndex = 19;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // egLblBomba
             // 
@@ -164,7 +164,7 @@
             this.Controls.Add(this.txtEmpresa);
             this.Controls.Add(this.egLblLitros);
             this.Controls.Add(this.txtLitros);
-            this.Controls.Add(this.egBtnCrear);
+            this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.egLblBomba);
             this.Controls.Add(this.egLblEmpresa);
             this.Controls.Add(this.egLblChofer);
@@ -185,7 +185,7 @@
         private System.Windows.Forms.TextBox txtEmpresa;
         private System.Windows.Forms.Label egLblLitros;
         private System.Windows.Forms.NumericUpDown txtLitros;
-        private System.Windows.Forms.Button egBtnCrear;
+        private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Label egLblBomba;
         private System.Windows.Forms.Label egLblEmpresa;
         private System.Windows.Forms.Label egLblChofer;

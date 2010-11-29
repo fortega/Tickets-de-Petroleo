@@ -31,9 +31,8 @@ namespace Tickets_de_Petroleo
 
         public void Crear()
         {
-            string sql = @"INSERT INTO egresos(egreso_dia,egreso_hora,empresa_rut,chofer_rut,camion_patente,operador_nombre,egreso_litros,bomba_id) VALUES
-(dbo.dia(current_timestamp),current_timestamp,@empresa,@chofer,@patente,@operador,@litros,@bomba); SELECT @@IDENTITY";
-            using (Database db = new Database(sql))
+            string sql = @"egreso_crear";
+            using (Database db = new Database(sql, CommandType.StoredProcedure))
             {
                 db.addParameter("@empresa", System.Data.SqlDbType.Int, camion.Empresa.Rut);
                 db.addParameter("@chofer", System.Data.SqlDbType.Int, chofer.Rut);
@@ -44,7 +43,7 @@ namespace Tickets_de_Petroleo
 
                 DataTable dt = db.getData();
 
-                id = (long)dt.Rows[0][0];
+                id = long.Parse(dt.Rows[0][0].ToString());
             }
         }
         

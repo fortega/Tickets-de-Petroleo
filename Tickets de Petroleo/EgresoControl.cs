@@ -59,11 +59,11 @@ namespace Tickets_de_Petroleo
 
         private void activaItems(bool activar)
         {
-            egBtnCrear.Enabled = activar;
+            btnCrear.Enabled = activar;
             ddlChofer.Enabled = activar;
         }
 
-        private void egBtnCrear_Click(object sender, EventArgs e)
+        private void btnCrear_Click(object sender, EventArgs e)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace Tickets_de_Petroleo
                     camion,
                     (Chofer)ddlChofer.SelectedItem,
                     Global.operador,
-                    float.Parse(txtLitros.Value.ToString()));
+                    (float)txtLitros.Value);
                 egreso.Crear();
 
                 MessageBox.Show(string.Concat("Ingresado con ID ", egreso.ID));

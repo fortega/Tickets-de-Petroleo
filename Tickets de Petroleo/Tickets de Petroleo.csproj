@@ -77,6 +77,12 @@
     <Compile Include="EgresoControl.Designer.cs">
       <DependentUpon>EgresoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="EgresoGuiaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EgresoGuiaControl.Designer.cs">
+      <DependentUpon>EgresoGuiaControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empresa.cs" />
     <Compile Include="EmpresaCrear.cs">
       <SubType>Form</SubType>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EgresoControl.resx">
       <DependentUpon>EgresoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgresoGuiaControl.resx">
+      <DependentUpon>EgresoGuiaControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpresaCrear.resx">
       <DependentUpon>EmpresaCrear.cs</DependentUpon>
