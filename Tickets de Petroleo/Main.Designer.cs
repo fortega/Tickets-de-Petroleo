@@ -37,17 +37,12 @@
             this.operadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bombasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblPatente = new System.Windows.Forms.Label();
-            this.lblEmpresa = new System.Windows.Forms.Label();
-            this.lblChofer = new System.Windows.Forms.Label();
-            this.lblLitros = new System.Windows.Forms.Label();
-            this.txtPatente = new System.Windows.Forms.TextBox();
-            this.txtEmpresa = new System.Windows.Forms.TextBox();
-            this.txtLitros = new System.Windows.Forms.TextBox();
-            this.ddlChofer = new System.Windows.Forms.ComboBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabEgresos = new System.Windows.Forms.TabPage();
+            this.tagIngresos = new System.Windows.Forms.TabPage();
+            this.tabCierre = new System.Windows.Forms.TabPage();
             this.menu.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -58,7 +53,7 @@
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menu.Size = new System.Drawing.Size(287, 24);
+            this.menu.Size = new System.Drawing.Size(669, 24);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
@@ -124,104 +119,53 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // lblPatente
+            // tabControl1
             // 
-            this.lblPatente.AutoSize = true;
-            this.lblPatente.Location = new System.Drawing.Point(16, 32);
-            this.lblPatente.Name = "lblPatente";
-            this.lblPatente.Size = new System.Drawing.Size(47, 13);
-            this.lblPatente.TabIndex = 1;
-            this.lblPatente.Text = "Patente:";
+            this.tabControl1.Controls.Add(this.tabEgresos);
+            this.tabControl1.Controls.Add(this.tagIngresos);
+            this.tabControl1.Controls.Add(this.tabCierre);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 24);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(669, 501);
+            this.tabControl1.TabIndex = 12;
             // 
-            // lblEmpresa
+            // tabEgresos
             // 
-            this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.Location = new System.Drawing.Point(12, 58);
-            this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(51, 13);
-            this.lblEmpresa.TabIndex = 2;
-            this.lblEmpresa.Text = "Empresa:";
+            this.tabEgresos.Location = new System.Drawing.Point(4, 22);
+            this.tabEgresos.Name = "tabEgresos";
+            this.tabEgresos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEgresos.Size = new System.Drawing.Size(661, 475);
+            this.tabEgresos.TabIndex = 0;
+            this.tabEgresos.Text = "Egresos";
+            this.tabEgresos.UseVisualStyleBackColor = true;
             // 
-            // lblChofer
+            // tagIngresos
             // 
-            this.lblChofer.AutoSize = true;
-            this.lblChofer.Location = new System.Drawing.Point(22, 84);
-            this.lblChofer.Name = "lblChofer";
-            this.lblChofer.Size = new System.Drawing.Size(41, 13);
-            this.lblChofer.TabIndex = 3;
-            this.lblChofer.Text = "Chofer:";
+            this.tagIngresos.Location = new System.Drawing.Point(4, 22);
+            this.tagIngresos.Name = "tagIngresos";
+            this.tagIngresos.Padding = new System.Windows.Forms.Padding(3);
+            this.tagIngresos.Size = new System.Drawing.Size(192, 74);
+            this.tagIngresos.TabIndex = 1;
+            this.tagIngresos.Text = "Ingresos";
+            this.tagIngresos.UseVisualStyleBackColor = true;
             // 
-            // lblLitros
+            // tabCierre
             // 
-            this.lblLitros.AutoSize = true;
-            this.lblLitros.Location = new System.Drawing.Point(28, 111);
-            this.lblLitros.Name = "lblLitros";
-            this.lblLitros.Size = new System.Drawing.Size(35, 13);
-            this.lblLitros.TabIndex = 4;
-            this.lblLitros.Text = "Litros:";
-            // 
-            // txtPatente
-            // 
-            this.txtPatente.Location = new System.Drawing.Point(69, 29);
-            this.txtPatente.Name = "txtPatente";
-            this.txtPatente.Size = new System.Drawing.Size(121, 20);
-            this.txtPatente.TabIndex = 5;
-            // 
-            // txtEmpresa
-            // 
-            this.txtEmpresa.Location = new System.Drawing.Point(69, 55);
-            this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(202, 20);
-            this.txtEmpresa.TabIndex = 6;
-            // 
-            // txtLitros
-            // 
-            this.txtLitros.Location = new System.Drawing.Point(69, 108);
-            this.txtLitros.Name = "txtLitros";
-            this.txtLitros.Size = new System.Drawing.Size(202, 20);
-            this.txtLitros.TabIndex = 8;
-            // 
-            // ddlChofer
-            // 
-            this.ddlChofer.FormattingEnabled = true;
-            this.ddlChofer.Location = new System.Drawing.Point(69, 81);
-            this.ddlChofer.Name = "ddlChofer";
-            this.ddlChofer.Size = new System.Drawing.Size(202, 21);
-            this.ddlChofer.TabIndex = 9;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(196, 27);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnCrear
-            // 
-            this.btnCrear.Location = new System.Drawing.Point(196, 134);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(75, 23);
-            this.btnCrear.TabIndex = 11;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.tabCierre.Location = new System.Drawing.Point(4, 22);
+            this.tabCierre.Name = "tabCierre";
+            this.tabCierre.Size = new System.Drawing.Size(192, 74);
+            this.tabCierre.TabIndex = 2;
+            this.tabCierre.Text = "Cierre";
+            this.tabCierre.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 173);
-            this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.ddlChofer);
-            this.Controls.Add(this.txtLitros);
-            this.Controls.Add(this.txtEmpresa);
-            this.Controls.Add(this.txtPatente);
-            this.Controls.Add(this.lblLitros);
-            this.Controls.Add(this.lblChofer);
-            this.Controls.Add(this.lblEmpresa);
-            this.Controls.Add(this.lblPatente);
+            this.ClientSize = new System.Drawing.Size(669, 525);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menu;
@@ -230,6 +174,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,15 +191,9 @@
         private System.Windows.Forms.ToolStripMenuItem choferesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem bombasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.Label lblPatente;
-        private System.Windows.Forms.Label lblEmpresa;
-        private System.Windows.Forms.Label lblChofer;
-        private System.Windows.Forms.Label lblLitros;
-        private System.Windows.Forms.TextBox txtPatente;
-        private System.Windows.Forms.TextBox txtEmpresa;
-        private System.Windows.Forms.TextBox txtLitros;
-        private System.Windows.Forms.ComboBox ddlChofer;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabEgresos;
+        private System.Windows.Forms.TabPage tagIngresos;
+        private System.Windows.Forms.TabPage tabCierre;
     }
 }
