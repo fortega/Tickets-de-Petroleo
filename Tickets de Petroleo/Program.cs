@@ -18,9 +18,9 @@ namespace Tickets_de_Petroleo
 
             if (Properties.Settings.Default.autouser_active)
             {
-                Application.Run(new Main(
-                    new Operador(Properties.Settings.Default.autouser_nombre,
-                        Properties.Settings.Default.autouser_passwd)));
+                Global.operador = new Operador(Properties.Settings.Default.autouser_nombre,
+                        Properties.Settings.Default.autouser_passwd);
+                Application.Run(new Main());
             }
             else
             {

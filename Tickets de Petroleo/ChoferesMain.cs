@@ -11,10 +11,8 @@ namespace Tickets_de_Petroleo
 {
     public partial class ChoferesMain : Form
     {
-        private Operador operador;
-        public ChoferesMain(Operador operador)
+        public ChoferesMain()
         {
-            this.operador = operador;
             InitializeComponent();
 
             CargarDatos();
@@ -25,7 +23,7 @@ namespace Tickets_de_Petroleo
             Chofer[] choferes = Chofer.Todos;
             gv.DataSource = choferes;
 
-            btnEditar.Enabled = btnBorrar.Enabled = (choferes.Length > 0 & operador.Admin);
+            btnEditar.Enabled = btnBorrar.Enabled = (choferes.Length > 0 & Global.operador.Admin);
         }
 
         private void btnCrear_Click(object sender, EventArgs e)

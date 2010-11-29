@@ -120,7 +120,7 @@ namespace Tickets_de_Petroleo
         private void setData(DataRow dr)
         {
             this.nombre = (string)dr["operador_nombre"];
-            this.nombre = (string)dr["operador_passwd"];
+            this.passwd = (string)dr["operador_passwd"];
             this.admin = (bool)dr["operador_admin"];
         }
 

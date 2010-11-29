@@ -11,15 +11,11 @@ namespace Tickets_de_Petroleo
 {
     public partial class Main : Form
     {
-        private Operador operador;
-
-        public Main(Operador operador)
+        public Main()
         {
-            this.operador = operador;
-
             InitializeComponent();
 
-            if (!operador.Admin)
+            if (!Global.operador.Admin)
             {
                 desactivaMenu();
             }
@@ -28,35 +24,36 @@ namespace Tickets_de_Petroleo
         private void desactivaMenu()
         {
             operadoresToolStripMenuItem.Enabled = false;
+            tabGroup.TabPages.Remove(tabIngresos);
         }
 
         private void abrir_empresaMain(object sender, EventArgs e)
         {
-            EmpresaMain empresaForm = new EmpresaMain(operador);
+            EmpresaMain empresaForm = new EmpresaMain();
             empresaForm.ShowDialog();
         }
 
         private void abrir_camionesMain(object sender, EventArgs e)
         {
-            CamionesMain camionesForm = new CamionesMain(operador);
+            CamionesMain camionesForm = new CamionesMain();
             camionesForm.ShowDialog();
         }
 
         private void abrir_choferesMain(object sender, EventArgs e)
         {
-            ChoferesMain choferesMain = new ChoferesMain(operador);
+            ChoferesMain choferesMain = new ChoferesMain();
             choferesMain.ShowDialog();
         }
 
         private void abrir_operadoresMain(object sender, EventArgs e)
         {
-            OperadoresMain operadoresForm = new OperadoresMain(operador);
+            OperadoresMain operadoresForm = new OperadoresMain();
             operadoresForm.ShowDialog();
         }
 
         private void abrir_bombasMain(object sender, EventArgs e)
         {
-            BombasMain bombasForm = new BombasMain(operador);
+            BombasMain bombasForm = new BombasMain();
             bombasForm.ShowDialog();
 
         }
@@ -73,5 +70,7 @@ namespace Tickets_de_Petroleo
                 e.Cancel = true;
             }
         }
+
+        
     }
 }

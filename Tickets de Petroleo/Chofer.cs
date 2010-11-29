@@ -92,5 +92,41 @@ namespace Tickets_de_Petroleo
                 return resultado.ToArray();
             }
         }
+
+        public static Chofer[] getFromEmpresa(Empresa empresa)
+        {
+            return getFromEmpresa(empresa.Rut);
+        }
+
+        public static Chofer[] getFromEmpresa(int rut)
+        {
+            string sql = @"select e.empresa_rut,e.empresa_nombre,c.chofer_rut,c.chofer_nombre
+                    from choferes c
+                    inner join empresas e
+                    on c.empresa_rut = e.empresa_rut
+                    where e.empresa_rut = @rut
+                    order by e.empresa_nombre,c.chofer_nombre";
+            List<Chofer> resultado = new List<Chofer>();
+
+            using (Database db = new Database(sql))
+            {
+                db.addParameter("@rut", SqlDbType.Int, rut);
+                DataTable dt = db.getData();
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    resultado.Add(
+                        new Chofer(
+                            new Empresa((int)dr["empresa_rut"], (string)dr["empresa_nombre"]),
+                        (int)dr["chofer_rut"], (string)dr["chofer_nombre"]));
+                }
+            }
+            return resultado.ToArray();
+        }
+
+        public override string ToString()
+        {
+            return string.Concat(nombre, " / ", rut);
+        }
     }
 }

@@ -67,6 +67,11 @@ namespace Tickets_de_Petroleo
                 }
                 return result.ToArray();
             }
-        }       
+        }
+
+        public override string ToString()
+        {
+            return nombre;
+        }
     }
 }

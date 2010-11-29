@@ -70,6 +70,13 @@
       <DependentUpon>ChoferCrear.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="Egreso.cs" />
+    <Compile Include="EgresoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EgresoControl.Designer.cs">
+      <DependentUpon>EgresoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empresa.cs" />
     <Compile Include="EmpresaCrear.cs">
       <SubType>Form</SubType>
@@ -78,6 +85,7 @@
       <DependentUpon>EmpresaCrear.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUtil.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChoferesMain.resx">
       <DependentUpon>ChoferesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgresoControl.resx">
+      <DependentUpon>EgresoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpresaCrear.resx">
       <DependentUpon>EmpresaCrear.cs</DependentUpon>

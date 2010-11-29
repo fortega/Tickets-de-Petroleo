@@ -8,7 +8,7 @@ namespace Tickets_de_Petroleo
 {
     public class Camion
     {
-        const string validaPatente = "(\\w{2}\\d{4})|(\\w{4}\\d{2})";
+        public const string validaPatente = "(\\w{2}\\d{4})|(\\w{4}\\d{2})";
         private Empresa empresa;
         private string patente;
 
@@ -89,6 +89,29 @@ namespace Tickets_de_Petroleo
                 }
                 return resultado.ToArray();
             }
+        }
+
+        public static Camion getFromPatente(string patente)
+        {
+            string sql = @"select e.empresa_nombre,c.empresa_rut,c.camion_patente from camiones c
+                    inner join empresas e
+                    on c.empresa_rut = e.empresa_rut
+                    where c.camion_patente = @patente
+                    order by e.empresa_nombre,c.camion_patente";
+            Camion resultado = null;
+            using (Database db = new Database(sql))
+            {
+                db.addParameter("@patente", SqlDbType.VarChar, patente);
+                DataTable dt = db.getData();
+
+                if (dt.Rows.Count == 1)
+                {
+                    DataRow dr = dt.Rows[0];
+                    resultado = new Camion(new Empresa((int)dr["empresa_rut"], (string)dr["empresa_nombre"]),
+                            (string)dr["camion_patente"]);
+                }
+            }
+            return resultado;
         }
     }
 }
