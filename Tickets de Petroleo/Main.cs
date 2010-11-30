@@ -55,7 +55,6 @@ namespace Tickets_de_Petroleo
         {
             BombasMain bombasForm = new BombasMain();
             bombasForm.ShowDialog();
-
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,6 +68,12 @@ namespace Tickets_de_Petroleo
             {
                 e.Cancel = true;
             }
+        }
+
+        private void ingresosYEgresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IngresoEgreso frm = new IngresoEgreso();
+            frm.ShowDialog();
         }
 
         

@@ -39,11 +39,13 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabGroup = new System.Windows.Forms.TabControl();
             this.tabEgresos = new System.Windows.Forms.TabPage();
-            this.tabCierre = new System.Windows.Forms.TabPage();
-            this.tabIngresos = new System.Windows.Forms.TabPage();
             this.egresoControl1 = new Tickets_de_Petroleo.EgresoControl();
+            this.tabCierre = new System.Windows.Forms.TabPage();
             this.egresoGuiaControl1 = new Tickets_de_Petroleo.EgresoGuiaControl();
+            this.tabIngresos = new System.Windows.Forms.TabPage();
             this.ingresoControl1 = new Tickets_de_Petroleo.IngresoControl();
+            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresosYEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.tabGroup.SuspendLayout();
             this.tabEgresos.SuspendLayout();
@@ -55,6 +57,7 @@
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenedoresToolStripMenuItem,
+            this.informesToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
@@ -80,7 +83,7 @@
             this.camionesToolStripMenuItem1,
             this.choferesToolStripMenuItem1});
             this.transportistasToolStripMenuItem.Name = "transportistasToolStripMenuItem";
-            this.transportistasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.transportistasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.transportistasToolStripMenuItem.Text = "Transportistas";
             // 
             // asdToolStripMenuItem
@@ -107,14 +110,14 @@
             // operadoresToolStripMenuItem
             // 
             this.operadoresToolStripMenuItem.Name = "operadoresToolStripMenuItem";
-            this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.operadoresToolStripMenuItem.Text = "Operadores";
             this.operadoresToolStripMenuItem.Click += new System.EventHandler(this.abrir_operadoresMain);
             // 
             // bombasToolStripMenuItem
             // 
             this.bombasToolStripMenuItem.Name = "bombasToolStripMenuItem";
-            this.bombasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.bombasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bombasToolStripMenuItem.Text = "Bombas";
             this.bombasToolStripMenuItem.Click += new System.EventHandler(this.abrir_bombasMain);
             // 
@@ -148,33 +151,22 @@
             this.tabEgresos.Text = "Egresos";
             this.tabEgresos.UseVisualStyleBackColor = true;
             // 
-            // tabCierre
-            // 
-            this.tabCierre.Controls.Add(this.egresoGuiaControl1);
-            this.tabCierre.Location = new System.Drawing.Point(4, 22);
-            this.tabCierre.Name = "tabCierre";
-            this.tabCierre.Size = new System.Drawing.Size(361, 212);
-            this.tabCierre.TabIndex = 2;
-            this.tabCierre.Text = "Cierre";
-            this.tabCierre.UseVisualStyleBackColor = true;
-            // 
-            // tabIngresos
-            // 
-            this.tabIngresos.Controls.Add(this.ingresoControl1);
-            this.tabIngresos.Location = new System.Drawing.Point(4, 22);
-            this.tabIngresos.Name = "tabIngresos";
-            this.tabIngresos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIngresos.Size = new System.Drawing.Size(361, 212);
-            this.tabIngresos.TabIndex = 1;
-            this.tabIngresos.Text = "Ingresos";
-            this.tabIngresos.UseVisualStyleBackColor = true;
-            // 
             // egresoControl1
             // 
             this.egresoControl1.Location = new System.Drawing.Point(8, 0);
             this.egresoControl1.Name = "egresoControl1";
             this.egresoControl1.Size = new System.Drawing.Size(334, 185);
             this.egresoControl1.TabIndex = 0;
+            // 
+            // tabCierre
+            // 
+            this.tabCierre.Controls.Add(this.egresoGuiaControl1);
+            this.tabCierre.Location = new System.Drawing.Point(4, 22);
+            this.tabCierre.Name = "tabCierre";
+            this.tabCierre.Size = new System.Drawing.Size(361, 195);
+            this.tabCierre.TabIndex = 2;
+            this.tabCierre.Text = "Cierre";
+            this.tabCierre.UseVisualStyleBackColor = true;
             // 
             // egresoGuiaControl1
             // 
@@ -183,12 +175,38 @@
             this.egresoGuiaControl1.Size = new System.Drawing.Size(278, 107);
             this.egresoGuiaControl1.TabIndex = 0;
             // 
+            // tabIngresos
+            // 
+            this.tabIngresos.Controls.Add(this.ingresoControl1);
+            this.tabIngresos.Location = new System.Drawing.Point(4, 22);
+            this.tabIngresos.Name = "tabIngresos";
+            this.tabIngresos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabIngresos.Size = new System.Drawing.Size(361, 195);
+            this.tabIngresos.TabIndex = 1;
+            this.tabIngresos.Text = "Ingresos";
+            this.tabIngresos.UseVisualStyleBackColor = true;
+            // 
             // ingresoControl1
             // 
             this.ingresoControl1.Location = new System.Drawing.Point(79, 6);
             this.ingresoControl1.Name = "ingresoControl1";
             this.ingresoControl1.Size = new System.Drawing.Size(202, 103);
             this.ingresoControl1.TabIndex = 0;
+            // 
+            // informesToolStripMenuItem
+            // 
+            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresosYEgresosToolStripMenuItem});
+            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.informesToolStripMenuItem.Text = "Informes";
+            // 
+            // ingresosYEgresosToolStripMenuItem
+            // 
+            this.ingresosYEgresosToolStripMenuItem.Name = "ingresosYEgresosToolStripMenuItem";
+            this.ingresosYEgresosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.ingresosYEgresosToolStripMenuItem.Text = "Ingresos y egresos";
+            this.ingresosYEgresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosYEgresosToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -232,5 +250,7 @@
         private EgresoControl egresoControl1;
         private EgresoGuiaControl egresoGuiaControl1;
         private IngresoControl ingresoControl1;
+        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresosYEgresosToolStripMenuItem;
     }
 }
