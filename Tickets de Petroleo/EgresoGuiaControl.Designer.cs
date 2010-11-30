@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.lblEgreso = new System.Windows.Forms.Label();
-            this.txtEgreso = new System.Windows.Forms.TextBox();
             this.lblLitros = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.txtLitros = new System.Windows.Forms.NumericUpDown();
             this.btnCerrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.txtEgreso = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLitros)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEgreso
@@ -45,13 +45,6 @@
             this.lblEgreso.TabIndex = 0;
             this.lblEgreso.Text = "Ticket:";
             // 
-            // txtEgreso
-            // 
-            this.txtEgreso.Location = new System.Drawing.Point(62, 13);
-            this.txtEgreso.Name = "txtEgreso";
-            this.txtEgreso.Size = new System.Drawing.Size(200, 20);
-            this.txtEgreso.TabIndex = 1;
-            // 
             // lblLitros
             // 
             this.lblLitros.AutoSize = true;
@@ -61,12 +54,33 @@
             this.lblLitros.TabIndex = 2;
             this.lblLitros.Text = "Litros:";
             // 
-            // numericUpDown1
+            // txtLitros
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(62, 40);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(200, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.txtLitros.DecimalPlaces = 1;
+            this.txtLitros.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.txtLitros.Location = new System.Drawing.Point(62, 40);
+            this.txtLitros.Maximum = new decimal(new int[] {
+            700,
+            0,
+            0,
+            0});
+            this.txtLitros.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtLitros.Name = "txtLitros";
+            this.txtLitros.Size = new System.Drawing.Size(200, 20);
+            this.txtLitros.TabIndex = 3;
+            this.txtLitros.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnCerrar
             // 
@@ -76,19 +90,27 @@
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "Cerrar Ticket";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // txtEgreso
+            // 
+            this.txtEgreso.Location = new System.Drawing.Point(62, 13);
+            this.txtEgreso.Name = "txtEgreso";
+            this.txtEgreso.Size = new System.Drawing.Size(200, 20);
+            this.txtEgreso.TabIndex = 1;
             // 
             // EgresoGuiaControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.txtLitros);
             this.Controls.Add(this.lblLitros);
             this.Controls.Add(this.txtEgreso);
             this.Controls.Add(this.lblEgreso);
             this.Name = "EgresoGuiaControl";
             this.Size = new System.Drawing.Size(278, 107);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLitros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,9 +119,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblEgreso;
-        private System.Windows.Forms.TextBox txtEgreso;
         private System.Windows.Forms.Label lblLitros;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown txtLitros;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.TextBox txtEgreso;
     }
 }

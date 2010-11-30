@@ -15,5 +15,15 @@ namespace Tickets_de_Petroleo
         {
             InitializeComponent();
         }
+
+        private void cargarBombas()
+        {
+            Bomba[] bombas = Bomba.Todos;
+
+            ddlBombas.Items.Clear();
+            ddlBombas.Items.AddRange(bombas);
+
+            ddlBombas.SelectedIndex = 0;
+        }
     }
 }

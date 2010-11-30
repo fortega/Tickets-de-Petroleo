@@ -70,5 +70,17 @@ namespace Tickets_de_Petroleo.Properties {
                 this["db"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1500")]
+        public int fadeMessageInterval {
+            get {
+                return ((int)(this["fadeMessageInterval"]));
+            }
+            set {
+                this["fadeMessageInterval"] = value;
+            }
+        }
     }
 }

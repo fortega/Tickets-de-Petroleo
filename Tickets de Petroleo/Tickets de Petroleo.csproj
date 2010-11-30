@@ -90,8 +90,20 @@
     <Compile Include="EmpresaCrear.Designer.cs">
       <DependentUpon>EmpresaCrear.cs</DependentUpon>
     </Compile>
+    <Compile Include="FadeMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FadeMessage.Designer.cs">
+      <DependentUpon>FadeMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtil.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="IngresoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IngresoControl.Designer.cs">
+      <DependentUpon>IngresoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmpresaMain.resx">
       <DependentUpon>EmpresaMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FadeMessage.resx">
+      <DependentUpon>FadeMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoControl.resx">
+      <DependentUpon>IngresoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

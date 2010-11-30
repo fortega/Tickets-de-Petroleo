@@ -45,6 +45,12 @@ namespace Tickets_de_Petroleo
             activaItems(patenteOk);
         }
 
+        private void LimpiarTodo()
+        {
+            txtPatente.Text = "";
+            Limpiar();
+        }
+
         private void Limpiar()
         {
             ddlChofer.Items.Clear();
@@ -75,7 +81,8 @@ namespace Tickets_de_Petroleo
                     (float)txtLitros.Value);
                 egreso.Crear();
 
-                MessageBox.Show(string.Concat("Ingresado con ID ", egreso.ID));
+                new FadeMessage(string.Concat("Ingresado con ID ", egreso.ID)).ShowDialog();
+                LimpiarTodo();
             }
             catch (Exception ex)
             {

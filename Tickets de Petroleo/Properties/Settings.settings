@@ -14,5 +14,8 @@
     <Setting Name="db" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Source=database;Initial Catalog=PETROLEO;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="fadeMessageInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1500</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

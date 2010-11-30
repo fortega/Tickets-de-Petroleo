@@ -46,6 +46,18 @@ namespace Tickets_de_Petroleo
                 id = long.Parse(dt.Rows[0][0].ToString());
             }
         }
-        
+
+        public static void Cerrar(long egreso_id, float litros_guia)
+        {
+            string sql = "egreso_cerrar";
+            using (Database db = new Database(sql, CommandType.StoredProcedure))
+            {
+                db.addParameter("@id", SqlDbType.BigInt, egreso_id);
+                db.addParameter("@litros", SqlDbType.Float, litros_guia);
+                db.addParameter("@operador", SqlDbType.VarChar, Global.operador.Nombre);
+
+                db.execute();
+            }
+        }
     }
 }
