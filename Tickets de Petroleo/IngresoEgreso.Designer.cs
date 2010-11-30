@@ -31,8 +31,8 @@
             this.layout = new System.Windows.Forms.TableLayoutPanel();
             this.gv = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ddlBombas = new System.Windows.Forms.ComboBox();
             this.lblBomba = new System.Windows.Forms.Label();
+            this.ddlBombas = new System.Windows.Forms.ComboBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblSaldoTexto = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSaldoValor = new System.Windows.Forms.ToolStripStatusLabel();
@@ -54,7 +54,7 @@
             this.layout.RowCount = 2;
             this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.layout.Size = new System.Drawing.Size(591, 442);
+            this.layout.Size = new System.Drawing.Size(913, 516);
             this.layout.TabIndex = 0;
             // 
             // gv
@@ -66,7 +66,7 @@
             this.gv.Location = new System.Drawing.Point(3, 3);
             this.gv.Name = "gv";
             this.gv.ReadOnly = true;
-            this.gv.Size = new System.Drawing.Size(585, 386);
+            this.gv.Size = new System.Drawing.Size(907, 460);
             this.gv.TabIndex = 0;
             // 
             // panel1
@@ -74,10 +74,19 @@
             this.panel1.Controls.Add(this.lblBomba);
             this.panel1.Controls.Add(this.ddlBombas);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 395);
+            this.panel1.Location = new System.Drawing.Point(3, 469);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(585, 44);
+            this.panel1.Size = new System.Drawing.Size(907, 44);
             this.panel1.TabIndex = 1;
+            // 
+            // lblBomba
+            // 
+            this.lblBomba.AutoSize = true;
+            this.lblBomba.Location = new System.Drawing.Point(7, 3);
+            this.lblBomba.Name = "lblBomba";
+            this.lblBomba.Size = new System.Drawing.Size(43, 13);
+            this.lblBomba.TabIndex = 1;
+            this.lblBomba.Text = "Bomba:";
             // 
             // ddlBombas
             // 
@@ -89,30 +98,21 @@
             this.ddlBombas.TabIndex = 0;
             this.ddlBombas.SelectedIndexChanged += new System.EventHandler(this.cargarDatos);
             // 
-            // lblBomba
-            // 
-            this.lblBomba.AutoSize = true;
-            this.lblBomba.Location = new System.Drawing.Point(7, 3);
-            this.lblBomba.Name = "lblBomba";
-            this.lblBomba.Size = new System.Drawing.Size(43, 13);
-            this.lblBomba.TabIndex = 1;
-            this.lblBomba.Text = "Bomba:";
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblSaldoTexto,
             this.lblSaldoValor});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 420);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 494);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(591, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(913, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblSaldoTexto
             // 
             this.lblSaldoTexto.Name = "lblSaldoTexto";
-            this.lblSaldoTexto.Size = new System.Drawing.Size(39, 17);
+            this.lblSaldoTexto.Size = new System.Drawing.Size(37, 17);
             this.lblSaldoTexto.Text = "Saldo:";
             // 
             // lblSaldoValor
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 442);
+            this.ClientSize = new System.Drawing.Size(913, 516);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.layout);
             this.Name = "IngresoEgreso";
