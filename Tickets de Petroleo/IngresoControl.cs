@@ -14,6 +14,8 @@ namespace Tickets_de_Petroleo
         public IngresoControl()
         {
             InitializeComponent();
+
+            cargarBombas();
         }
 
         private void cargarBombas()
@@ -24,6 +26,24 @@ namespace Tickets_de_Petroleo
             ddlBombas.Items.AddRange(bombas);
 
             ddlBombas.SelectedIndex = 0;
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Bomba bomba = (Bomba)ddlBombas.SelectedItem;
+                float litros = (float)txtLitros.Value;
+
+                Ingreso ingreso = new Ingreso(bomba, litros);
+                ingreso.Crear();
+
+                new FadeMessage(string.Concat("Ingresados ", litros, "lts en ", bomba.Nombre)).ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

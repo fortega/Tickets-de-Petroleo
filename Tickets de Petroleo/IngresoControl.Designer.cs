@@ -47,6 +47,7 @@
             // 
             // ddlBombas
             // 
+            this.ddlBombas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlBombas.FormattingEnabled = true;
             this.ddlBombas.Location = new System.Drawing.Point(63, 14);
             this.ddlBombas.Name = "ddlBombas";
@@ -66,7 +67,7 @@
             // 
             this.txtLitros.Location = new System.Drawing.Point(63, 42);
             this.txtLitros.Maximum = new decimal(new int[] {
-            100000,
+            999999,
             0,
             0,
             0});
@@ -93,6 +94,7 @@
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // IngresoControl
             // 
