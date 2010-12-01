@@ -37,7 +37,7 @@ namespace Tickets_de_Petroleo.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("password")]
+        [global::System.Configuration.DefaultSettingValueAttribute("supersonic")]
         public string autouser_passwd {
             get {
                 return ((string)(this["autouser_passwd"]));

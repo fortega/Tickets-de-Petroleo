@@ -76,6 +76,12 @@ namespace Tickets_de_Petroleo
             frm.ShowDialog();
         }
 
+        private void egresosAbiertosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EgresosAbiertos frm = new EgresosAbiertos();
+            frm.ShowDialog();
+        }
+
         
     }
 }

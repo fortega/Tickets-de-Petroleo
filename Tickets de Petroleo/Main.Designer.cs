@@ -36,6 +36,8 @@
             this.choferesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.operadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bombasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresosYEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabGroup = new System.Windows.Forms.TabControl();
             this.tabEgresos = new System.Windows.Forms.TabPage();
@@ -44,8 +46,7 @@
             this.egresoGuiaControl1 = new Tickets_de_Petroleo.EgresoGuiaControl();
             this.tabIngresos = new System.Windows.Forms.TabPage();
             this.ingresoControl1 = new Tickets_de_Petroleo.IngresoControl();
-            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresosYEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.egresosAbiertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.tabGroup.SuspendLayout();
             this.tabEgresos.SuspendLayout();
@@ -83,7 +84,7 @@
             this.camionesToolStripMenuItem1,
             this.choferesToolStripMenuItem1});
             this.transportistasToolStripMenuItem.Name = "transportistasToolStripMenuItem";
-            this.transportistasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.transportistasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.transportistasToolStripMenuItem.Text = "Transportistas";
             // 
             // asdToolStripMenuItem
@@ -110,16 +111,32 @@
             // operadoresToolStripMenuItem
             // 
             this.operadoresToolStripMenuItem.Name = "operadoresToolStripMenuItem";
-            this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.operadoresToolStripMenuItem.Text = "Operadores";
             this.operadoresToolStripMenuItem.Click += new System.EventHandler(this.abrir_operadoresMain);
             // 
             // bombasToolStripMenuItem
             // 
             this.bombasToolStripMenuItem.Name = "bombasToolStripMenuItem";
-            this.bombasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bombasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bombasToolStripMenuItem.Text = "Bombas";
             this.bombasToolStripMenuItem.Click += new System.EventHandler(this.abrir_bombasMain);
+            // 
+            // informesToolStripMenuItem
+            // 
+            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresosYEgresosToolStripMenuItem,
+            this.egresosAbiertosToolStripMenuItem});
+            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.informesToolStripMenuItem.Text = "Informes";
+            // 
+            // ingresosYEgresosToolStripMenuItem
+            // 
+            this.ingresosYEgresosToolStripMenuItem.Name = "ingresosYEgresosToolStripMenuItem";
+            this.ingresosYEgresosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.ingresosYEgresosToolStripMenuItem.Text = "Ingresos y egresos";
+            this.ingresosYEgresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosYEgresosToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -153,7 +170,7 @@
             // 
             // egresoControl1
             // 
-            this.egresoControl1.Location = new System.Drawing.Point(8, 0);
+            this.egresoControl1.Location = new System.Drawing.Point(13, 0);
             this.egresoControl1.Name = "egresoControl1";
             this.egresoControl1.Size = new System.Drawing.Size(334, 185);
             this.egresoControl1.TabIndex = 0;
@@ -193,20 +210,12 @@
             this.ingresoControl1.Size = new System.Drawing.Size(202, 103);
             this.ingresoControl1.TabIndex = 0;
             // 
-            // informesToolStripMenuItem
+            // egresosAbiertosToolStripMenuItem
             // 
-            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresosYEgresosToolStripMenuItem});
-            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.informesToolStripMenuItem.Text = "Informes";
-            // 
-            // ingresosYEgresosToolStripMenuItem
-            // 
-            this.ingresosYEgresosToolStripMenuItem.Name = "ingresosYEgresosToolStripMenuItem";
-            this.ingresosYEgresosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.ingresosYEgresosToolStripMenuItem.Text = "Ingresos y egresos";
-            this.ingresosYEgresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosYEgresosToolStripMenuItem_Click);
+            this.egresosAbiertosToolStripMenuItem.Name = "egresosAbiertosToolStripMenuItem";
+            this.egresosAbiertosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.egresosAbiertosToolStripMenuItem.Text = "Egresos abiertos";
+            this.egresosAbiertosToolStripMenuItem.Click += new System.EventHandler(this.egresosAbiertosToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -252,5 +261,6 @@
         private IngresoControl ingresoControl1;
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresosYEgresosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem egresosAbiertosToolStripMenuItem;
     }
 }

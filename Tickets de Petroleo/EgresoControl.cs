@@ -19,12 +19,13 @@ namespace Tickets_de_Petroleo
             cargarBomas();
         }
 
-        private void cargarBomas()
+        public void cargarBomas()
         {
             Bomba[] bombas = Bomba.Todos;
             ddlBomba.Items.Clear();
             ddlBomba.Items.AddRange(bombas);
-            ddlBomba.SelectedIndex = 0;
+            if(bombas.Length > 0)
+                ddlBomba.SelectedIndex = 0;
         }
 
         private void checkPatente(object sender, EventArgs e)

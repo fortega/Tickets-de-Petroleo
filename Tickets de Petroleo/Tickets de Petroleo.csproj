@@ -83,6 +83,12 @@
     <Compile Include="EgresoGuiaControl.Designer.cs">
       <DependentUpon>EgresoGuiaControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="EgresosAbiertos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EgresosAbiertos.Designer.cs">
+      <DependentUpon>EgresosAbiertos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empresa.cs" />
     <Compile Include="EmpresaCrear.cs">
       <SubType>Form</SubType>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EgresoGuiaControl.resx">
       <DependentUpon>EgresoGuiaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgresosAbiertos.resx">
+      <DependentUpon>EgresosAbiertos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpresaCrear.resx">
       <DependentUpon>EmpresaCrear.cs</DependentUpon>

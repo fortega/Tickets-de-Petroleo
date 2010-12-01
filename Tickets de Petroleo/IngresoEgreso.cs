@@ -11,6 +11,7 @@ namespace Tickets_de_Petroleo
 {
     public partial class IngresoEgreso : Form
     {
+        const string TODAS = "Todas";
         public IngresoEgreso()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Tickets_de_Petroleo
 
             ddlBombas.Items.Clear();
             ddlBombas.Items.AddRange(bombas);
-            ddlBombas.Items.Add(new Bomba(0, "Todas"));
+            ddlBombas.Items.Add(new Bomba(0, TODAS));
 
             ddlBombas.SelectedIndex = ddlBombas.Items.Count - 1;
         }
@@ -32,7 +33,7 @@ namespace Tickets_de_Petroleo
         private void cargarGV()
         {
             string sql = @"select bomba,dia,hora,operador,item,litros,final from egreso_ingreso
-                where bomba = @bomba or @bomba = 'Todas'
+                where bomba = @bomba or @bomba = '" + TODAS + @"'
                 order by hora desc";
 
             Bomba bomba = (Bomba)ddlBombas.SelectedItem;
@@ -48,7 +49,7 @@ namespace Tickets_de_Petroleo
         private void cargarSaldo()
         {
             string sql = @"select sum(litros) as litros from egreso_ingreso
-                where bomba = @bomba or @bomba = 'Todas'";
+                where bomba = @bomba or @bomba = '" + TODAS + @"'";
 
             Bomba bomba = (Bomba)ddlBombas.SelectedItem;
             using (Database db = new Database(sql))

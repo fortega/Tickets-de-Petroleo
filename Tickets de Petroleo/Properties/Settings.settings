@@ -6,7 +6,7 @@
       <Value Profile="(Default)">administrador</Value>
     </Setting>
     <Setting Name="autouser_passwd" Type="System.String" Scope="User">
-      <Value Profile="(Default)">password</Value>
+      <Value Profile="(Default)">supersonic</Value>
     </Setting>
     <Setting Name="autouser_active" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

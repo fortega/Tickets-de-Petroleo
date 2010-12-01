@@ -18,14 +18,14 @@ namespace Tickets_de_Petroleo
             cargarBombas();
         }
 
-        private void cargarBombas()
+        public void cargarBombas()
         {
             Bomba[] bombas = Bomba.Todos;
 
             ddlBombas.Items.Clear();
             ddlBombas.Items.AddRange(bombas);
-
-            ddlBombas.SelectedIndex = 0;
+            if(bombas.Length > 0)
+                ddlBombas.SelectedIndex = 0;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
