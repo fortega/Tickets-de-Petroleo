@@ -15,10 +15,10 @@ namespace Tickets_de_Petroleo
         {
             InitializeComponent();
 
-            cargarBombas();
+            CargarBombas();
         }
 
-        public void cargarBombas()
+        public void CargarBombas()
         {
             Bomba[] bombas = Bomba.Todos;
 

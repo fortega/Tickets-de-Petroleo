@@ -13,6 +13,7 @@ namespace Tickets_de_Petroleo
     {
         public BombasMain()
         {
+            this.DialogResult = DialogResult.Abort;
             InitializeComponent();
 
             CargarDatos();
@@ -30,7 +31,10 @@ namespace Tickets_de_Petroleo
         {
             BombaCrear frm = new BombaCrear();
             if (frm.ShowDialog() == DialogResult.OK)
+            {
                 CargarDatos();
+                this.DialogResult = DialogResult.OK;
+            }
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -44,6 +48,7 @@ namespace Tickets_de_Petroleo
             {
                 seleccion.Borrar();
                 CargarDatos();
+                this.DialogResult = DialogResult.OK;
             }
         }
 
@@ -52,7 +57,10 @@ namespace Tickets_de_Petroleo
             Bomba seleccion = (Bomba)gv.SelectedRows[0].DataBoundItem;
             BombaCrear frm = new BombaCrear(seleccion);
             if (frm.ShowDialog() == DialogResult.OK)
+            {
                 CargarDatos();
+                this.DialogResult = DialogResult.OK;
+            }
         }
     }
 }

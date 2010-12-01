@@ -54,7 +54,10 @@ namespace Tickets_de_Petroleo
         private void abrir_bombasMain(object sender, EventArgs e)
         {
             BombasMain bombasForm = new BombasMain();
-            bombasForm.ShowDialog();
+            if(bombasForm.ShowDialog() == DialogResult.OK)
+            {
+                RecargarBombas();
+            };
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,6 +85,10 @@ namespace Tickets_de_Petroleo
             frm.ShowDialog();
         }
 
-        
+        public void RecargarBombas()
+        {
+            egresoControl1.CargarBombas();
+            ingresoControl1.CargarBombas();
+        }
     }
 }
