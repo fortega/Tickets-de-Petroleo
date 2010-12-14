@@ -1,5 +1,10 @@
 Tickets de Petroleo/bin
 
+
 Tickets de Petroleo/obj
+
+Setup/Debug
+Setup/Release
 *.suo
+
 Thumbs.db
