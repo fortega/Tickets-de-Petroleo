@@ -82,5 +82,29 @@ namespace Tickets_de_Petroleo.Properties {
                 this["fadeMessageInterval"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Serial")]
+        public string impresoraTipo {
+            get {
+                return ((string)(this["impresoraTipo"]));
+            }
+            set {
+                this["impresoraTipo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("COM1")]
+        public string impresoraSerialCom {
+            get {
+                return ((string)(this["impresoraSerialCom"]));
+            }
+            set {
+                this["impresoraSerialCom"] = value;
+            }
+        }
     }
 }

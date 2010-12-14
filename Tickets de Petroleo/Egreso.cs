@@ -8,6 +8,7 @@ namespace Tickets_de_Petroleo
 {
     public class Egreso
     {
+        private DateTime hora;
         private Bomba bomba;
         private Camion camion;
         private Chofer chofer;
@@ -43,7 +44,8 @@ namespace Tickets_de_Petroleo
 
                 DataTable dt = db.getData();
 
-                id = long.Parse(dt.Rows[0][0].ToString());
+                id = (long)dt.Rows[0]["egreso_id"];
+                hora = (DateTime)dt.Rows[0]["egreso_hora"];
             }
         }
 
@@ -58,6 +60,28 @@ namespace Tickets_de_Petroleo
 
                 db.execute();
             }
+        }
+
+        public void Imprimir(IImpresora impresora)
+        {
+            impresora.CambiaAlineacion(Alineacion.Centro);
+            impresora.ImprimeLinea("Consorcio Santa Marta S.A.");
+            impresora.ImprimeLinea("Ticket de petroleo");
+            impresora.Lineas(1);
+
+            impresora.CambiaAlineacion(Alineacion.Izquierda);
+            impresora.ImprimeLinea(string.Concat("Folio: ", id));
+            impresora.ImprimeLinea(string.Concat("Fecha: ", hora.ToString("dd/MMM/YY HH:mm:ss")));
+            impresora.ImprimeLinea(string.Concat("Litros (max): ", litros_egreso.ToString("0.0")));
+            impresora.Lineas(1);
+
+            impresora.ImprimeLinea(string.Concat("Empresa: ", camion.Empresa.Nombre));
+            impresora.ImprimeLinea(string.Concat("Camion: ", camion.Patente));
+            impresora.ImprimeLinea(string.Concat("Chofer: ", chofer.Nombre));
+            impresora.Lineas(1);
+
+            impresora.ImprimeCodigoBarra(id.ToString());
+            impresora.CorteCompleto();
         }
     }
 }

@@ -118,6 +118,7 @@
             this.Controls.Add(this.layout);
             this.Name = "BombasMain";
             this.Text = "BombasMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.cerrando);
             this.layout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv)).EndInit();
             this.pnlBotones.ResumeLayout(false);

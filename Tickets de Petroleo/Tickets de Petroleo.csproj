@@ -104,6 +104,8 @@
     </Compile>
     <Compile Include="FormUtil.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="IImpresora.cs" />
+    <Compile Include="ImpresoraSerial.cs" />
     <Compile Include="Ingreso.cs" />
     <Compile Include="IngresoControl.cs">
       <SubType>UserControl</SubType>

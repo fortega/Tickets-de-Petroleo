@@ -8,5 +8,6 @@ namespace Tickets_de_Petroleo
     public class Global
     {
         public static Operador operador;
+        public static IImpresora impresora;
     }
 }

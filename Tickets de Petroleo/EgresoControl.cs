@@ -82,6 +82,10 @@ namespace Tickets_de_Petroleo
                     (float)txtLitros.Value);
                 egreso.Crear();
 
+                Global.impresora.Iniciar();
+                egreso.Imprimir(Global.impresora);
+                Global.impresora.Detener();
+
                 new FadeMessage(string.Concat("Ingresado con ID ", egreso.ID)).ShowDialog();
                 LimpiarTodo();
             }

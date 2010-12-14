@@ -16,6 +16,11 @@ namespace Tickets_de_Petroleo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            if (Properties.Settings.Default.impresoraTipo == "Serial")
+            {
+                Global.impresora = new ImpresoraSerial(Properties.Settings.Default.impresoraSerialCom);
+            }
+
             if (Properties.Settings.Default.autouser_active)
             {
                 Global.operador = new Operador(Properties.Settings.Default.autouser_nombre,

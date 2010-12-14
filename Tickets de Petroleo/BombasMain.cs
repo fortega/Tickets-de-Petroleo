@@ -11,9 +11,9 @@ namespace Tickets_de_Petroleo
 {
     public partial class BombasMain : Form
     {
+        DialogResult resultado = DialogResult.Abort;
         public BombasMain()
         {
-            this.DialogResult = DialogResult.Abort;
             InitializeComponent();
 
             CargarDatos();
@@ -33,7 +33,7 @@ namespace Tickets_de_Petroleo
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 CargarDatos();
-                this.DialogResult = DialogResult.OK;
+                resultado = DialogResult.OK;
             }
         }
 
@@ -61,6 +61,11 @@ namespace Tickets_de_Petroleo
                 CargarDatos();
                 this.DialogResult = DialogResult.OK;
             }
+        }
+
+        private void cerrando(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = resultado;
         }
     }
 }

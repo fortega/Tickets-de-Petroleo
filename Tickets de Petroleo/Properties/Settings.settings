@@ -17,5 +17,11 @@
     <Setting Name="fadeMessageInterval" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1500</Value>
     </Setting>
+    <Setting Name="impresoraTipo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Serial</Value>
+    </Setting>
+    <Setting Name="impresoraSerialCom" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
